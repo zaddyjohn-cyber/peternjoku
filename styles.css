@@ -353,26 +353,125 @@ p{margin:0 0 1em}
   .nav-cta .btn:not(.btn-primary):not(.btn-gold){ display:none }
 }
 
-/* ---------- Hero — premium ---------- */
+/* ---------- Hero — premium (split: text + media card) ---------- */
 .hero{
   position:relative; isolation:isolate; overflow:hidden;
   color:#fff;
-  padding: clamp(80px, 12vw, 140px) 0 clamp(100px, 14vw, 160px);
-  background:var(--navy);
+  padding: clamp(70px, 10vw, 120px) 0 clamp(80px, 12vw, 140px);
+  background:linear-gradient(160deg, var(--navy) 0%, var(--navy-700) 60%, var(--navy-600) 100%);
 }
-.hero-media{ position:absolute; inset:0; z-index:-2 }
-.hero-media video, .hero-media img{
+/* Two-column layout: text left, video card right */
+.hero-grid{
+  display:grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items:center;
+}
+.hero-content{ max-width: 560px }
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; gap:40px }
+  .hero-content{ max-width:none }
+}
+
+/* Hero card — holds the video as a surface element */
+.hero-card{
+  position:relative; isolation:isolate;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    inset 0 -2px 12px rgba(0,0,0,.25),
+    0 30px 60px -22px rgba(0,0,0,.55),
+    0 60px 120px -40px rgba(0,0,0,.5);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  transform: perspective(1200px) rotateY(-3deg) rotateX(2deg);
+  transition: transform .5s var(--ease-out);
+}
+.hero-card:hover{ transform: perspective(1200px) rotateY(-1deg) rotateX(1deg) translateY(-4px) }
+.hero-card video, .hero-card img{
   width:100%; height:100%; object-fit:cover;
-  filter:saturate(.85) brightness(.95);
+  display:block;
+  filter:saturate(1.05);
+}
+/* Gloss highlight diagonally across the card */
+.hero-card::before{
+  content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:linear-gradient(150deg,
+    rgba(255,255,255,.18) 0%,
+    rgba(255,255,255,.04) 20%,
+    transparent 50%);
+  mix-blend-mode: screen;
+}
+/* Gold edge ring inside the card */
+.hero-card::after{
+  content:""; position:absolute; inset:8px; z-index:2; pointer-events:none;
+  border-radius:22px;
+  border:1px solid rgba(201,162,39,.30);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+/* Floating badge on the hero card */
+.hero-card-badge{
+  position:absolute; left:18px; bottom:18px; z-index:3;
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px;
+  background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.85) 100%);
+  border:1px solid rgba(255,255,255,.6);
+  border-left:4px solid var(--gold);
+  border-radius:14px;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 -2px 6px rgba(201,162,39,.10),
+    0 14px 30px -10px rgba(0,0,0,.4);
+}
+.hero-card-badge .seal{
+  width:36px; height:36px; border-radius:50%; flex:0 0 auto;
+  background:linear-gradient(135deg, #E6BD3F 0%, var(--gold) 50%, var(--gold-deep) 100%);
+  color:#fff; display:grid; place-items:center;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -2px 6px rgba(139,110,21,.4),
+    0 4px 10px -2px rgba(201,162,39,.5);
+}
+.hero-card-badge .seal svg{ width:18px; height:18px }
+.hero-card-badge strong{
+  display:block; color:var(--navy);
+  font-family:var(--font-head); font-size:1rem; line-height:1.1;
+  letter-spacing:-.01em;
+}
+.hero-card-badge small{ color:var(--muted); font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; font-weight:600 }
+
+/* Small accent card hovering off the main card (collage feel, like the reference) */
+.hero-card-mini{
+  position:absolute; top:-22px; right:-22px; z-index:4;
+  width:130px; height:130px; border-radius:18px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.4),
+    0 18px 40px -14px rgba(0,0,0,.6);
+  transform: perspective(800px) rotateY(6deg) rotateZ(4deg);
+  background:#0B1F3A;
+}
+.hero-card-mini img{ width:100%; height:100%; object-fit:cover; display:block }
+.hero-card-mini::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(11,31,58,.35) 100%);
+}
+@media (max-width: 540px){
+  .hero-card-mini{ width:96px; height:96px; top:-14px; right:-14px }
 }
 .hero-overlay{
-  position:absolute; inset:0; z-index:-1;
+  position:absolute; inset:0; z-index:-1; pointer-events:none;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201,162,39,.35), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 100% 30%, rgba(40,83,140,.45), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(30,142,90,.28), transparent 70%),
-    radial-gradient(ellipse 100% 80% at 50% 100%, rgba(11,31,58,.45), transparent 80%),
-    linear-gradient(115deg, rgba(11,31,58,.92) 0%, rgba(11,31,58,.75) 45%, rgba(11,31,58,.55) 100%);
+    radial-gradient(ellipse 70% 50% at 20% -10%, rgba(201,162,39,.30), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 40%, rgba(40,83,140,.40), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 0% 90%, rgba(30,142,90,.22), transparent 70%);
 }
 .hero-overlay::after{
   /* edge vignette — darkens corners */
