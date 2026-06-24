@@ -749,13 +749,32 @@ p{margin:0 0 1em}
   background:var(--gold); border-radius:50%; margin-top:.55rem;
 }
 .loan-card .spacer{ flex:1 }
+/* "Read more" pointer — no arrow, just a confident text CTA with growing underline */
 .loan-card .arrow{
-  color:var(--green-700); font-weight:600; display:inline-flex;
-  align-items:center; gap:8px; font-size:.95rem; letter-spacing:-.005em;
-  margin-top:auto;
+  color:var(--green-700); font-weight:700;
+  font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
+  margin-top:auto; padding-top:16px;
+  position:relative; align-self:flex-start;
+  border-top:1px dashed var(--line);
+  width:100%;
+  transition:color .2s;
 }
-.loan-card .arrow svg{ transition:transform .25s var(--ease) }
-.loan-card:hover .arrow svg{ transform:translateX(6px) }
+.loan-card .arrow::after{
+  content:""; display:block;
+  width:28px; height:2px;
+  background:linear-gradient(90deg, var(--green) 0%, var(--green-700) 100%);
+  border-radius:2px;
+  margin-top:8px;
+  transition: width .3s var(--ease);
+}
+.loan-card:hover .arrow{ color:var(--green) }
+.loan-card:hover .arrow::after{ width:64px }
+/* Defense: any stray svg inside .arrow must stay small */
+.loan-card .arrow svg{ width:14px; height:14px; flex:0 0 14px }
+
+/* Loan cards with media: drop the gold top accent and the extra top padding */
+.loan-card:has(.card-media){ padding-top:30px }
+.loan-card:has(.card-media)::after{ display:none }
 
 /* Feature card */
 .feature{ display:flex; gap:16px; align-items:flex-start }
