@@ -377,12 +377,13 @@ p{margin:0 0 1em}
   .hero > .container{ padding: 0 24px }
 }
 
-/* Hero card — sizes itself to the video's natural aspect (zero bars possible) */
+/* Hero card — fills the column, locked to the video's 9:16 aspect (zero bars) */
 .hero-card{
   position:relative; isolation:isolate;
   display:block;
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 9 / 16;   /* matches heropage.mp4 exactly (486x864) */
   margin-inline: auto;
   border-radius: 22px;
   overflow:hidden;
@@ -398,17 +399,16 @@ p{margin:0 0 1em}
 }
 .hero-card:hover{ transform: perspective(1400px) rotateY(-1deg) rotateX(.5deg) translateY(-4px) }
 .hero-card video, .hero-card img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;     /* perfect fill — card aspect matches video aspect */
   display:block;
-  /* Fixed height + natural-aspect width = video defines the card's shape */
-  height: clamp(360px, 62vh, 620px);
-  width: auto;
-  max-width: 100%;
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 @media (max-width: 980px){
-  .hero-card video, .hero-card img{ height: clamp(320px, 55vh, 520px) }
+  .hero-card{ max-width: 420px }
 }
 /* Subtle top corner sheen for the 3D feel — small, doesn't cover the video */
 .hero-card::before{
