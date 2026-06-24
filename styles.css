@@ -360,34 +360,35 @@ p{margin:0 0 1em}
   padding: clamp(70px, 10vw, 120px) 0 clamp(80px, 12vw, 140px);
   background:linear-gradient(160deg, var(--navy) 0%, var(--navy-700) 60%, var(--navy-600) 100%);
 }
+/* Hero container — wider than default so text reaches closer to the left edge */
+.hero > .container{ max-width: 1380px; padding: 0 clamp(20px, 3vw, 40px) }
+
 /* Two-column layout: text left, video card right */
 .hero-grid{
   display:grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
-  gap: clamp(32px, 5vw, 64px);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: clamp(28px, 4vw, 56px);
   align-items:center;
 }
-.hero-content{ max-width: 560px }
+.hero-content{ max-width: 620px }
 @media (max-width: 980px){
   .hero-grid{ grid-template-columns: 1fr; gap:40px }
   .hero-content{ max-width:none }
+  .hero > .container{ padding: 0 24px }
 }
 
-/* Hero card — holds the video as a surface element */
+/* Hero card — the video itself as a clean surface (no frame around it) */
 .hero-card{
   position:relative; isolation:isolate;
-  aspect-ratio: 16 / 11;
-  border-radius: 24px;
+  aspect-ratio: 9 / 14;          /* portrait — matches the actual video */
+  border-radius: 22px;
   overflow:hidden;
-  /* Navy gradient frame — visible behind the contained video */
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 50%, var(--navy-600) 0%, var(--navy-700) 60%, var(--navy) 100%);
-  border:1px solid rgba(255,255,255,.14);
+  background:transparent;
+  /* 3D depth from shadows only, no border/frame */
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.22),
-    inset 0 -2px 14px rgba(0,0,0,.30),
-    0 30px 60px -22px rgba(0,0,0,.55),
-    0 60px 120px -40px rgba(0,0,0,.5);
+    0 30px 60px -22px rgba(0,0,0,.6),
+    0 60px 120px -40px rgba(0,0,0,.55),
+    0 2px 6px rgba(0,0,0,.25);
   transform: perspective(1400px) rotateY(-3deg) rotateX(1.5deg);
   transform-style: preserve-3d;
   transition: transform .5s var(--ease-out);
@@ -397,28 +398,20 @@ p{margin:0 0 1em}
 .hero-card video, .hero-card img{
   position:absolute; inset:0;
   width:100%; height:100%;
-  /* contain → entire video is visible, no cropping */
-  object-fit: contain;
+  /* cover → video fills the card completely, no navy bars */
+  object-fit: cover;
   display:block;
-  /* hardware-accelerated layer keeps the video crisp under the perspective transform */
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-/* Very subtle gloss highlight — only top-left corner, doesn't wash out the video */
+/* Subtle top corner sheen for the 3D feel — small, doesn't cover the video */
 .hero-card::before{
   content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
   background:linear-gradient(150deg,
-    rgba(255,255,255,.10) 0%,
+    rgba(255,255,255,.12) 0%,
     rgba(255,255,255,.02) 12%,
     transparent 28%);
-}
-/* Gold edge ring inside the card */
-.hero-card::after{
-  content:""; position:absolute; inset:8px; z-index:2; pointer-events:none;
-  border-radius:18px;
-  border:1px solid rgba(201,162,39,.30);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
 }
 
 /* Floating badge on the hero card */
