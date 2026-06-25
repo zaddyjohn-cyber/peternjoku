@@ -598,8 +598,8 @@ p{margin:0 0 1em}
 .page-hero-media{
   position:relative;
   width:100%;
-  max-width: 460px;
-  aspect-ratio: 3 / 4;
+  max-width: 540px;
+  aspect-ratio: 5 / 4;        /* landscape default — fits house photos */
   border-radius: 22px;
   overflow:hidden;
   margin-inline:auto;
@@ -611,6 +611,11 @@ p{margin:0 0 1em}
   transform: perspective(1400px) rotateY(-3deg) rotateX(1.5deg);
   transform-style: preserve-3d;
   transition: transform .5s var(--ease-out);
+}
+/* Portrait variant used by the About page (Bond's headshot) */
+.page-hero-media.portrait{
+  max-width: 460px;
+  aspect-ratio: 3 / 4;
 }
 .page-hero-media:hover{ transform: perspective(1400px) rotateY(-1deg) rotateX(.5deg) translateY(-4px) }
 .page-hero-media img{
