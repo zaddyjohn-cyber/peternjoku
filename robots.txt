@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Disallow temporary or low-value paths
+Disallow: /404.html
+
+# Sitemaps (Google + Bing read these)
 Sitemap: https://bondpeterhomeloans.com/sitemap.xml
+Sitemap: https://bondpeterhomeloans.com/sitemap-images.xml
+Sitemap: https://bondpeterhomeloans.com/sitemap-videos.xml

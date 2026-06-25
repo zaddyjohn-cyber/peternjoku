@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Home page hero video -->
+  <url>
+    <loc>https://bondpeterhomeloans.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/07e734301b3459e6916a7c3db0cca50d.jpg</video:thumbnail_loc>
+      <video:title>Helping Texas Families Achieve Homeownership</video:title>
+      <video:description>A look inside Bond Peter Mortgage Solutions — guiding Texas families through FHA, VA, USDA, Conventional, and refinance loans.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/heropage.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+
+  <!-- Why Choose Bond Peter card videos -->
+  <url>
+    <loc>https://bondpeterhomeloans.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/b4f593757b7ad5ef4f55562b1d826aec.jpg</video:thumbnail_loc>
+      <video:title>Clear Communication</video:title>
+      <video:description>Status updates that come to you, not the other way around — how Bond Peter Mortgage Solutions handles communication.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Clear%20Communication.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/b4f593757b7ad5ef4f55562b1d826aec.jpg</video:thumbnail_loc>
+      <video:title>Honest Guidance</video:title>
+      <video:description>Straight answers on what fits your goals and what doesn't — Bond Peter Mortgage Solutions guidance.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Honest%20Guidance.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/ce1a6cbd29b6f0ee00614726bf1792a0.jpg</video:thumbnail_loc>
+      <video:title>Personalized Loan Options</video:title>
+      <video:description>FHA, VA, USDA, Conventional, and refinance — matched to your credit, budget, and target home.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Personalized%20Loan%20Options.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/32cc162773aba087101856b66d3f26db.jpg</video:thumbnail_loc>
+      <video:title>Support from Application to Closing</video:title>
+      <video:description>End-to-end support from your mortgage application through closing day — Bond Peter Mortgage Solutions.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Support%20Application%20to%20Closing.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/5f1429b1046ce0e1c58b3fd7f72d1161.jpg</video:thumbnail_loc>
+      <video:title>Fast Pre-Approvals</video:title>
+      <video:description>Realtor-ready pre-approval letters that strengthen your offer in active Texas neighborhoods.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Fast%20Pre-Approvals.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <!-- About page Mission section videos -->
+  <url>
+    <loc>https://bondpeterhomeloans.com/about.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/Peter%20Njoku.jpg</video:thumbnail_loc>
+      <video:title>Family-First Decisions</video:title>
+      <video:description>Mortgage guidance framed around what works for your household, not just what closes fastest.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Family-First%20Decisions.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/about.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/Peter%20Njoku.jpg</video:thumbnail_loc>
+      <video:title>Trust and Compliance</video:title>
+      <video:description>Licensed Texas mortgage operations — NMLS #2670329 and Mortgage Funding Solutions Company NMLS #1972934.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Trust%20%26%20Compliance.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/about.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/Peter%20Njoku.jpg</video:thumbnail_loc>
+      <video:title>Education First</video:title>
+      <video:description>Every mortgage disclosure, fee, and decision explained in plain English so you feel informed, not pressured.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/Education%20First.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://bondpeterhomeloans.com/about.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://bondpeterhomeloans.com/Peter%20Njoku.jpg</video:thumbnail_loc>
+      <video:title>End-to-End Support</video:title>
+      <video:description>From application through closing day — and after — Bond Peter Mortgage Solutions stays with you.</video:description>
+      <video:content_loc>https://bondpeterhomeloans.com/End-to-End%20Support.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+</urlset>

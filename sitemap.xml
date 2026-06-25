@@ -21,6 +21,11 @@
   <url><loc>https://bondpeterhomeloans.com/mortgage-glossary.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bondpeterhomeloans.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
+  <!-- Legal pages -->
+  <url><loc>https://bondpeterhomeloans.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/accessibility.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+
   <!-- Location pages -->
   <url><loc>https://bondpeterhomeloans.com/locations/dallas.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/locations/garland.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
