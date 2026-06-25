@@ -1,0 +1,17 @@
+{
+  "name": "Bond Peter Mortgage Solutions",
+  "short_name": "BondPeter",
+  "description": "Texas mortgage guidance — FHA, VA, USDA, Conventional, and refinance loans. Personal NMLS #2670329 · Company NMLS #1972934.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3A",
+  "theme_color": "#0B1F3A",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "icons": [
+    { "src": "Bond%20Peter%20Logo.jpeg", "sizes": "192x192", "type": "image/jpeg", "purpose": "any" },
+    { "src": "Bond%20Peter%20Logo.jpeg", "sizes": "512x512", "type": "image/jpeg", "purpose": "any" }
+  ],
+  "categories": ["finance", "business"]
+}

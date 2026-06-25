@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bondpeterhomeloans.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://bondpeterhomeloans.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/about.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/loan-options.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bondpeterhomeloans.com/fha-loans.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bondpeterhomeloans.com/conventional-loans.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -14,12 +14,14 @@
   <url><loc>https://bondpeterhomeloans.com/mortgage-calculators.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/down-payment-assistance.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bondpeterhomeloans.com/credit-score-improvement.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://bondpeterhomeloans.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://bondpeterhomeloans.com/reviews.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://bondpeterhomeloans.com/realtor-partners.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://bondpeterhomeloans.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/mortgage-glossary.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bondpeterhomeloans.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Location pages -->
   <url><loc>https://bondpeterhomeloans.com/locations/dallas.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/locations/garland.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/locations/plano.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
@@ -28,4 +30,16 @@
   <url><loc>https://bondpeterhomeloans.com/locations/rockwall.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/locations/royse-city.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondpeterhomeloans.com/locations/forney.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Blog posts (June 2026 — first publication batch) -->
+  <url><loc>https://bondpeterhomeloans.com/blog/fha-vs-conventional-loans-texas.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/how-to-prepare-for-mortgage-pre-approval-texas.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/what-texas-first-time-buyers-should-know.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/how-credit-scores-affect-your-mortgage.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/va-loan-benefits-texas-veterans.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/understanding-closing-costs-texas-mortgage.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/usda-loans-texas-eligibility.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/when-refinancing-texas-mortgage-makes-sense.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/down-payment-assistance-texas-homebuyers.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://bondpeterhomeloans.com/blog/pre-qualification-vs-pre-approval.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>
