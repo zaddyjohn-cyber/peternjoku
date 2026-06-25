@@ -1664,3 +1664,92 @@ p{margin:0 0 1em}
   .hero-actions .btn{ width:100% }
   .hero-actions{ width:100% }
 }
+
+/* ============ Trust Badges Row ============ */
+.trust-strip{
+  background: linear-gradient(180deg, #f9fafb 0%, #fff 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+.trust-strip .container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+.trust-badge{
+  display:flex; gap:12px; align-items:center;
+  padding: 12px 14px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow: var(--shadow-sm);
+  transition: .25s var(--ease);
+}
+.trust-badge:hover{ transform: translateY(-2px); border-color: var(--gold); box-shadow: var(--shadow-md) }
+.trust-badge .icon{
+  width:42px; height:42px; flex:none;
+  display:grid; place-items:center;
+  border-radius:10px;
+  background: linear-gradient(135deg, rgba(201,162,39,.14), rgba(11,31,58,.08));
+  color: var(--gold-deep);
+}
+.trust-badge .icon svg{ width:22px; height:22px }
+.trust-badge .text{ display:flex; flex-direction:column; line-height:1.2 }
+.trust-badge .text strong{ color: var(--navy); font-size:.92rem; font-weight:700 }
+.trust-badge .text small{ color: var(--muted); font-size:.78rem; margin-top:2px }
+.trust-badge a{ color: inherit; text-decoration: none; display: contents }
+
+/* ============ Related Articles Widget (blog) ============ */
+.related-articles{
+  margin: 56px 0 0;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+.related-articles h2{
+  font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+  margin: 0 0 22px;
+  color: var(--navy);
+}
+.related-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.related-card{
+  display:block;
+  padding: 20px 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: .25s var(--ease);
+  text-decoration: none;
+  color: inherit;
+}
+.related-card:hover{
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+}
+.related-card .tag{
+  display:inline-block;
+  font-size:.72rem; font-weight:700;
+  text-transform: uppercase; letter-spacing:.06em;
+  color: var(--gold-deep);
+  margin-bottom: 8px;
+}
+.related-card h3{
+  font-size: 1.02rem;
+  margin: 0 0 8px;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.related-card p{
+  font-size: .88rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
