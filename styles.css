@@ -239,7 +239,26 @@ p{margin:0 0 1em}
   display:flex; align-items:center; justify-content:space-between;
   padding-top:18px; padding-bottom:18px;
 }
-.brand{display:flex; align-items:center; gap:.8rem; text-decoration:none; position:relative}
+.brand{display:flex; align-items:center; gap:.85rem; text-decoration:none; position:relative}
+
+/* Compliance disclosure under the brand logo — Texas mortgage law */
+.brand-license{
+  display:flex; flex-direction:column; line-height:1.25;
+  font-family:var(--font-body);
+  font-size:.7rem; letter-spacing:.06em;
+  color:var(--muted);
+  max-width:180px;
+}
+.brand-license .biz{ text-transform:uppercase; font-weight:600; color:var(--navy); font-size:.68rem; letter-spacing:.1em }
+.brand-license .nmls{ color:var(--navy); font-weight:800; font-size:.82rem; letter-spacing:.04em; margin-top:1px }
+.brand-license .nmls em{ font-style:normal; color:var(--gold-deep); font-weight:900 }
+.foot-brand .brand-license{ color:#a6b3c8; max-width:220px; margin-top:10px }
+.foot-brand .brand-license .biz{ color:#fff }
+.foot-brand .brand-license .nmls{ color:#fff }
+.foot-brand .brand-license .nmls em{ color:var(--gold-soft) }
+@media (max-width: 720px){
+  .brand-license{ display:none }
+}
 
 /* ===== Premium logo treatment =====
    The .brand-logo class wraps the BondPeter logo image. It floats on a
