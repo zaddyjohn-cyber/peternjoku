@@ -263,6 +263,56 @@ p{margin:0 0 1em}
 }
 .brand{display:flex; align-items:center; gap:.85rem; text-decoration:none; position:relative}
 
+/* The header brand-license collides with the nav at common widths,
+   so it's hidden there. The footer .brand-license stays visible per
+   compliance (and the brand-banner below the nav also names the
+   company prominently). */
+.nav-main .brand-license{ display:none }
+
+/* Brand banner strip — sits between nav and the page hero
+   on every page, displays "BOND PETER MORTGAGE SOLUTIONS"
+   big and bold so it can't be missed */
+.brand-banner{
+  background: linear-gradient(120deg, var(--navy) 0%, var(--navy-700) 60%, var(--navy-600) 100%);
+  color:#fff;
+  text-align:center;
+  padding: 18px 16px;
+  border-top: 1px solid rgba(201,162,39,.18);
+  border-bottom: 3px solid var(--gold);
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.brand-banner::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% -20%, rgba(201,162,39,.22), transparent 60%),
+    radial-gradient(ellipse 50% 70% at 10% 100%, rgba(40,83,140,.25), transparent 70%);
+}
+.brand-banner h2{
+  margin:0;
+  font-family: var(--font-head);
+  font-size: clamp(1.4rem, 3.4vw, 2.2rem);
+  font-weight:700;
+  letter-spacing: .04em;
+  color:#fff;
+  line-height:1.1;
+  text-shadow: 0 2px 14px rgba(201,162,39,.25);
+}
+.brand-banner h2 em{
+  font-style:normal;
+  color: var(--gold);
+  font-weight:900;
+}
+.brand-banner p{
+  margin: 6px 0 0;
+  font-size:.78rem;
+  color: rgba(255,255,255,.65);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-weight:600;
+}
+
 /* Compliance disclosure under the brand logo — Texas mortgage law */
 .brand-license{
   display:flex; flex-direction:column; line-height:1.25;
