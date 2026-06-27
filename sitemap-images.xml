@@ -1,66 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Homepage with logo + hero poster -->
   <url>
-    <loc>https://bondpeterhomeloans.com/</loc>
+    <loc>https://bondmortgagesolutions.com/</loc>
     <image:image>
-      <image:loc>https://bondpeterhomeloans.com/Bond%20Peter%20Logo.jpeg</image:loc>
+      <image:loc>https://bondmortgagesolutions.com/Bond%20Peter%20Logo.jpeg</image:loc>
       <image:title>Bond Peter Mortgage Solutions logo</image:title>
       <image:caption>Texas mortgage loan officer Bond Peter, NMLS #2670329, Mortgage Funding Solutions Company NMLS #1972934.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://bondpeterhomeloans.com/07e734301b3459e6916a7c3db0cca50d.jpg</image:loc>
+      <image:loc>https://bondmortgagesolutions.com/07e734301b3459e6916a7c3db0cca50d.jpg</image:loc>
       <image:title>Texas suburban home</image:title>
     </image:image>
   </url>
 
   <!-- About page with Bond's portraits -->
   <url>
-    <loc>https://bondpeterhomeloans.com/about.html</loc>
+    <loc>https://bondmortgagesolutions.com/about.html</loc>
     <image:image>
-      <image:loc>https://bondpeterhomeloans.com/Peter.jpg</image:loc>
+      <image:loc>https://bondmortgagesolutions.com/Peter.jpg</image:loc>
       <image:title>Bond Peter, Mortgage Loan Officer</image:title>
       <image:caption>Bond Peter at his Garland, TX office reviewing a mortgage application.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://bondpeterhomeloans.com/Peter%20Njoku.jpg</image:loc>
+      <image:loc>https://bondmortgagesolutions.com/Peter%20Njoku.jpg</image:loc>
       <image:title>Bond Peter — professional headshot</image:title>
     </image:image>
   </url>
 
   <!-- Loan Options card art -->
   <url>
-    <loc>https://bondpeterhomeloans.com/loan-options.html</loc>
-    <image:image><image:loc>https://bondpeterhomeloans.com/FHA%20loans.jpg</image:loc><image:title>FHA loan eligible Texas home</image:title></image:image>
-    <image:image><image:loc>https://bondpeterhomeloans.com/conventional%20loans.jpg</image:loc><image:title>Conventional loan Texas home</image:title></image:image>
-    <image:image><image:loc>https://bondpeterhomeloans.com/VA%20loan.jpg</image:loc><image:title>VA loan benefit Texas home</image:title></image:image>
-    <image:image><image:loc>https://bondpeterhomeloans.com/USDA%20loan.jpg</image:loc><image:title>USDA-eligible Texas suburban home</image:title></image:image>
-    <image:image><image:loc>https://bondpeterhomeloans.com/Refinance.jpg</image:loc><image:title>Texas home — refinance candidate</image:title></image:image>
-    <image:image><image:loc>https://bondpeterhomeloans.com/Down%20Payment%20Assistance.jpg</image:loc><image:title>Down payment assistance for Texas buyers</image:title></image:image>
+    <loc>https://bondmortgagesolutions.com/loan-options.html</loc>
+    <image:image><image:loc>https://bondmortgagesolutions.com/FHA%20loans.jpg</image:loc><image:title>FHA loan eligible Texas home</image:title></image:image>
+    <image:image><image:loc>https://bondmortgagesolutions.com/conventional%20loans.jpg</image:loc><image:title>Conventional loan Texas home</image:title></image:image>
+    <image:image><image:loc>https://bondmortgagesolutions.com/VA%20loan.jpg</image:loc><image:title>VA loan benefit Texas home</image:title></image:image>
+    <image:image><image:loc>https://bondmortgagesolutions.com/USDA%20loan.jpg</image:loc><image:title>USDA-eligible Texas suburban home</image:title></image:image>
+    <image:image><image:loc>https://bondmortgagesolutions.com/Refinance.jpg</image:loc><image:title>Texas home — refinance candidate</image:title></image:image>
+    <image:image><image:loc>https://bondmortgagesolutions.com/Down%20Payment%20Assistance.jpg</image:loc><image:title>Down payment assistance for Texas buyers</image:title></image:image>
   </url>
 
   <!-- Loan detail pages — each with its hero image -->
-  <url><loc>https://bondpeterhomeloans.com/fha-loans.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/FHA%20loans.jpg</image:loc><image:title>FHA loans in Texas</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/conventional-loans.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/conventional%20loans.jpg</image:loc><image:title>Conventional loans in Texas</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/va-loans.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/VA%20loan.jpg</image:loc><image:title>VA loans for Texas Veterans</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/usda-loans.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/USDA%20loan.jpg</image:loc><image:title>USDA loans in Texas</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/refinance.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/Refinance.jpg</image:loc><image:title>Texas mortgage refinance</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/fha-loans.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/FHA%20loans.jpg</image:loc><image:title>FHA loans in Texas</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/conventional-loans.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/conventional%20loans.jpg</image:loc><image:title>Conventional loans in Texas</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/va-loans.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/VA%20loan.jpg</image:loc><image:title>VA loans for Texas Veterans</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/usda-loans.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/USDA%20loan.jpg</image:loc><image:title>USDA loans in Texas</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/refinance.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/Refinance.jpg</image:loc><image:title>Texas mortgage refinance</image:title></image:image></url>
 
   <!-- First-time buyer guide -->
-  <url><loc>https://bondpeterhomeloans.com/first-time-homebuyer-guide.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/33fc919b01b6cbb060ce5d31d40902b7.jpg</image:loc><image:title>Texas first-time homebuyer home</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/first-time-homebuyer-guide.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/33fc919b01b6cbb060ce5d31d40902b7.jpg</image:loc><image:title>Texas first-time homebuyer home</image:title></image:image></url>
 
   <!-- Blog posts -->
-  <url><loc>https://bondpeterhomeloans.com/blog/fha-vs-conventional-loans-texas.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/77ea233e-932b-4c44-b2c4-4e2c62830c73.jpg</image:loc><image:title>FHA vs Conventional comparison</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/how-to-prepare-for-mortgage-pre-approval-texas.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/5f1429b1046ce0e1c58b3fd7f72d1161.jpg</image:loc><image:title>Mortgage pre-approval preparation</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/what-texas-first-time-buyers-should-know.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/e40eefa469ddd02e633d547cdafba2ae.jpg</image:loc><image:title>Texas first-time homebuyer tips</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/how-credit-scores-affect-your-mortgage.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/32cc162773aba087101856b66d3f26db.jpg</image:loc><image:title>Credit and mortgage approval</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/va-loan-benefits-texas-veterans.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/VA%20loan.jpg</image:loc><image:title>VA loan benefits for Texas Veterans</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/understanding-closing-costs-texas-mortgage.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/eb13648cd2c3c9b7bd7a44613dfe4684.jpg</image:loc><image:title>Texas closing costs explained</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/usda-loans-texas-eligibility.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/USDA%20loan.jpg</image:loc><image:title>USDA loan eligibility in Texas</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/when-refinancing-texas-mortgage-makes-sense.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/Refinance.jpg</image:loc><image:title>When to refinance a Texas mortgage</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/down-payment-assistance-texas-homebuyers.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/Down%20Payment%20Assistance.jpg</image:loc><image:title>Texas down payment assistance</image:title></image:image></url>
-  <url><loc>https://bondpeterhomeloans.com/blog/pre-qualification-vs-pre-approval.html</loc><image:image><image:loc>https://bondpeterhomeloans.com/ce1a6cbd29b6f0ee00614726bf1792a0.jpg</image:loc><image:title>Pre-qualification vs pre-approval</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/fha-vs-conventional-loans-texas.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/77ea233e-932b-4c44-b2c4-4e2c62830c73.jpg</image:loc><image:title>FHA vs Conventional comparison</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/how-to-prepare-for-mortgage-pre-approval-texas.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/5f1429b1046ce0e1c58b3fd7f72d1161.jpg</image:loc><image:title>Mortgage pre-approval preparation</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/what-texas-first-time-buyers-should-know.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/e40eefa469ddd02e633d547cdafba2ae.jpg</image:loc><image:title>Texas first-time homebuyer tips</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/how-credit-scores-affect-your-mortgage.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/32cc162773aba087101856b66d3f26db.jpg</image:loc><image:title>Credit and mortgage approval</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/va-loan-benefits-texas-veterans.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/VA%20loan.jpg</image:loc><image:title>VA loan benefits for Texas Veterans</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/understanding-closing-costs-texas-mortgage.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/eb13648cd2c3c9b7bd7a44613dfe4684.jpg</image:loc><image:title>Texas closing costs explained</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/usda-loans-texas-eligibility.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/USDA%20loan.jpg</image:loc><image:title>USDA loan eligibility in Texas</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/when-refinancing-texas-mortgage-makes-sense.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/Refinance.jpg</image:loc><image:title>When to refinance a Texas mortgage</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/down-payment-assistance-texas-homebuyers.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/Down%20Payment%20Assistance.jpg</image:loc><image:title>Texas down payment assistance</image:title></image:image></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/pre-qualification-vs-pre-approval.html</loc><image:image><image:loc>https://bondmortgagesolutions.com/ce1a6cbd29b6f0ee00614726bf1792a0.jpg</image:loc><image:title>Pre-qualification vs pre-approval</image:title></image:image></url>
 
 </urlset>
