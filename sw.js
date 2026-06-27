@@ -1,4 +1,4 @@
-/* Bond Peter Mortgage Solutions — Service Worker
+﻿/* Bond Mortgage Solutions — Service Worker
    v3 — bump this when shipping major asset changes to force-update clients.
    Strategy:
      - HTML: network-first with cache fallback (always fresh when online)
