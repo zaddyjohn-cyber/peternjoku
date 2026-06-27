@@ -580,7 +580,6 @@ p{margin:0 0 1em}
   display:block;
   width: 100%;
   max-width: 520px;
-  aspect-ratio: 9 / 16;   /* matches heropage.mp4 exactly (486x864) */
   margin-inline: auto;
   border-radius: 22px;
   overflow:hidden;
@@ -596,10 +595,10 @@ p{margin:0 0 1em}
 }
 .hero-card:hover{ transform: perspective(1400px) rotateY(-1deg) rotateX(.5deg) translateY(-4px) }
 .hero-card video, .hero-card img{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover;     /* perfect fill — card aspect matches video aspect */
   display:block;
+  width:100%; height:auto;
+  object-fit:contain;
+  border-radius:inherit;
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
