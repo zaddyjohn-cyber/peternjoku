@@ -260,25 +260,24 @@
       const btn = w3fForm.querySelector('[type="submit"]');
       const successNote = w3fForm.querySelector('.success-note');
       const errorNote = w3fForm.querySelector('.error-note');
-      const payload = Object.fromEntries(new FormData(w3fForm));
-      // Show thank-you immediately so the user always gets feedback
+      if (successNote) successNote.hidden = true;
+      if (errorNote) errorNote.hidden = true;
       btn.disabled = true;
       btn.textContent = 'Sending…';
-      if (errorNote) errorNote.hidden = true;
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(Object.fromEntries(new FormData(w3fForm)))
         });
         const data = await res.json();
         if (data.success) {
+          w3fForm.reset();
           if (successNote) {
             successNote.hidden = false;
             successNote.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
-          w3fForm.reset();
-          btn.hidden = true;
+          btn.textContent = 'Submitted';
         } else {
           if (errorNote) errorNote.hidden = false;
           btn.disabled = false;
