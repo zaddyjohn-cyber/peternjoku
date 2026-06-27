@@ -324,9 +324,13 @@ p{margin:0 0 1em}
    company prominently). */
 .nav-main .brand-license{ display:none }
 
-/* Brand banner strip — sits between nav and the page hero
-   on every page, displays "BOND PETER MORTGAGE SOLUTIONS"
-   big and bold so it can't be missed */
+/* Brand banner strip — shows on page load, collapses on first scroll */
+.brand-banner{
+  transition:max-height .4s ease,opacity .35s ease,padding .4s ease,border .4s ease;
+  max-height:200px;
+  opacity:1;
+}
+.brand-banner--hidden{max-height:0;opacity:0;padding-top:0;padding-bottom:0;border:none;overflow:hidden;pointer-events:none}
 .brand-banner{
   background: linear-gradient(120deg, var(--navy) 0%, var(--navy-700) 60%, var(--navy-600) 100%);
   color:#fff;
@@ -1515,6 +1519,25 @@ p{margin:0 0 1em}
   font-size:1.05rem; color:var(--navy);
 }
 .article-body .compliance-box{ font-size:.92rem; margin-top:2.5em }
+
+/* Footer social icons */
+.foot-social{display:flex;gap:.65rem;margin-top:1.1rem;align-items:center;flex-wrap:wrap}
+.foot-social a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:var(--white);transition:background .2s,transform .15s;flex-shrink:0}
+.foot-social a:hover{background:var(--gold);transform:translateY(-2px)}
+.foot-social svg{width:17px;height:17px;flex-shrink:0}
+
+/* FAQ Block — blog articles */
+.faq-block{margin:2.8rem 0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--white)}
+.faq-block>h2{font-size:1.3rem;font-family:var(--font-head);color:var(--navy);padding:1.4rem 1.75rem 1rem;margin:0;border-bottom:1px solid var(--line);letter-spacing:-.01em}
+.faq-item{border-bottom:1px solid var(--line-2)}
+.faq-item:last-child{border-bottom:none}
+.faq-item summary{cursor:pointer;padding:1.1rem 1.75rem;font-weight:600;font-size:1rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .15s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{background:var(--navy-50)}
+.faq-item summary::after{content:'+';font-size:1.35rem;font-weight:400;color:var(--gold);flex-shrink:0;line-height:1;transition:transform .2s}
+.faq-item[open]>summary{background:var(--navy-50)}
+.faq-item[open]>summary::after{content:'−'}
+.faq-item .faq-answer{padding:.25rem 1.75rem 1.25rem;margin:0;color:var(--muted);line-height:1.72;font-size:1.03rem}
 .article-cta{
   margin-top:2.4em; padding:28px 32px;
   background:linear-gradient(160deg, var(--navy) 0%, var(--navy-700) 100%);

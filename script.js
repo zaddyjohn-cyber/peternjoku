@@ -3,6 +3,16 @@
 (function () {
   'use strict';
 
+  // -------- Brand banner — dismiss on first scroll --------
+  const banner = document.querySelector('.brand-banner');
+  if (banner) {
+    const dismissBanner = () => {
+      banner.classList.add('brand-banner--hidden');
+      window.removeEventListener('scroll', dismissBanner);
+    };
+    window.addEventListener('scroll', dismissBanner, { passive: true });
+  }
+
   // -------- Sticky header shadow on scroll --------
   const header = document.querySelector('.site-header');
   if (header) {
@@ -239,6 +249,46 @@
         const t = item.textContent.toLowerCase();
         item.style.display = !q || t.includes(q) ? '' : 'none';
       });
+    });
+  }
+
+  // -------- Pre-approval form → Web3Forms --------
+  const w3fForm = document.querySelector('form[data-w3f]');
+  if (w3fForm) {
+    w3fForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = w3fForm.querySelector('[type="submit"]');
+      const successNote = w3fForm.querySelector('.success-note');
+      const errorNote = w3fForm.querySelector('.error-note');
+      const payload = Object.fromEntries(new FormData(w3fForm));
+      // Show thank-you immediately so the user always gets feedback
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      if (errorNote) errorNote.hidden = true;
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          if (successNote) {
+            successNote.hidden = false;
+            successNote.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          w3fForm.reset();
+          btn.hidden = true;
+        } else {
+          if (errorNote) errorNote.hidden = false;
+          btn.disabled = false;
+          btn.textContent = 'Start My Pre-Approval';
+        }
+      } catch {
+        if (errorNote) errorNote.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Start My Pre-Approval';
+      }
     });
   }
 
