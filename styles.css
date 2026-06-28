@@ -1297,6 +1297,7 @@ p{margin:0 0 1em}
 
 /* ---------- FAQ ---------- */
 .faq{ display:grid; gap:14px; max-width:900px; margin:0 auto }
+.faq-cat{ font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-family:var(--font-body); margin:2rem 0 .25rem; border-bottom:1px solid var(--line); padding-bottom:.5rem }
 .faq-item{
   background:#fff; border:1px solid var(--line);
   border-radius:16px; overflow:hidden;
