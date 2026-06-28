@@ -1389,7 +1389,7 @@ p{margin:0 0 1em}
 }
 .site-footer > .container{ position:relative; z-index:1 }
 .foot-grid{
-  display:grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  display:grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
   gap:40px;
 }
 @media (max-width:900px){ .foot-grid{ grid-template-columns:1fr 1fr; gap:32px 28px } }
