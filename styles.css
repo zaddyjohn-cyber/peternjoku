@@ -44,8 +44,8 @@
   --font-head: "Playfair Display", "Merriweather", Georgia, serif;
   --font-body: "Inter", "Source Sans Pro", "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  --section-py: 0px;
-  --section-py-sm: 0px;
+  --section-py: 96px;
+  --section-py-sm: 64px;
 }
 
 *,*::before,*::after{box-sizing:border-box}
