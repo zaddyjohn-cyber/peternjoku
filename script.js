@@ -1,4 +1,4 @@
-/* Bond Peter Home Loans — site script */
+/* Peter Home Loans — site script */
 
 (function () {
   'use strict';

@@ -8,7 +8,7 @@
     <video:video>
       <video:thumbnail_loc>https://bondmortgagesolutions.com/07e734301b3459e6916a7c3db0cca50d.jpg</video:thumbnail_loc>
       <video:title>Helping Texas Families Achieve Homeownership</video:title>
-      <video:description>A look inside Bond Peter Mortgage Solutions — guiding Texas families through FHA, VA, USDA, Conventional, and refinance loans.</video:description>
+      <video:description>A look inside Peter Mortgage Solutions — guiding Texas families through FHA, VA, USDA, Conventional, and refinance loans.</video:description>
       <video:content_loc>https://bondmortgagesolutions.com/heropage.mp4</video:content_loc>
       <video:duration>30</video:duration>
       <video:family_friendly>yes</video:family_friendly>
@@ -17,13 +17,13 @@
     </video:video>
   </url>
 
-  <!-- Why Choose Bond Peter card videos -->
+  <!-- Why Choose Peter card videos -->
   <url>
     <loc>https://bondmortgagesolutions.com/</loc>
     <video:video>
       <video:thumbnail_loc>https://bondmortgagesolutions.com/b4f593757b7ad5ef4f55562b1d826aec.jpg</video:thumbnail_loc>
       <video:title>Clear Communication</video:title>
-      <video:description>Status updates that come to you, not the other way around — how Bond Peter Mortgage Solutions handles communication.</video:description>
+      <video:description>Status updates that come to you, not the other way around — how Peter Mortgage Solutions handles communication.</video:description>
       <video:content_loc>https://bondmortgagesolutions.com/Clear%20Communication.mp4</video:content_loc>
       <video:duration>15</video:duration>
       <video:family_friendly>yes</video:family_friendly>
@@ -34,7 +34,7 @@
     <video:video>
       <video:thumbnail_loc>https://bondmortgagesolutions.com/b4f593757b7ad5ef4f55562b1d826aec.jpg</video:thumbnail_loc>
       <video:title>Honest Guidance</video:title>
-      <video:description>Straight answers on what fits your goals and what doesn't — Bond Peter Mortgage Solutions guidance.</video:description>
+      <video:description>Straight answers on what fits your goals and what doesn't — Peter Mortgage Solutions guidance.</video:description>
       <video:content_loc>https://bondmortgagesolutions.com/Honest%20Guidance.mp4</video:content_loc>
       <video:duration>15</video:duration>
       <video:family_friendly>yes</video:family_friendly>
@@ -56,7 +56,7 @@
     <video:video>
       <video:thumbnail_loc>https://bondmortgagesolutions.com/32cc162773aba087101856b66d3f26db.jpg</video:thumbnail_loc>
       <video:title>Support from Application to Closing</video:title>
-      <video:description>End-to-end support from your mortgage application through closing day — Bond Peter Mortgage Solutions.</video:description>
+      <video:description>End-to-end support from your mortgage application through closing day — Peter Mortgage Solutions.</video:description>
       <video:content_loc>https://bondmortgagesolutions.com/Support%20Application%20to%20Closing.mp4</video:content_loc>
       <video:duration>15</video:duration>
       <video:family_friendly>yes</video:family_friendly>
@@ -113,7 +113,7 @@
     <video:video>
       <video:thumbnail_loc>https://bondmortgagesolutions.com/Peter%20.jpg</video:thumbnail_loc>
       <video:title>End-to-End Support</video:title>
-      <video:description>From application through closing day — and after — Bond Peter Mortgage Solutions stays with you.</video:description>
+      <video:description>From application through closing day — and after — Peter Mortgage Solutions stays with you.</video:description>
       <video:content_loc>https://bondmortgagesolutions.com/End-to-End%20Support.mp4</video:content_loc>
       <video:duration>15</video:duration>
       <video:family_friendly>yes</video:family_friendly>
