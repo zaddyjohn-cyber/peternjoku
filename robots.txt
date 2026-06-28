@@ -5,6 +5,6 @@ Allow: /
 Disallow: /404.html
 
 # Sitemaps (Google + Bing read these)
-Sitemap: https://bondpeterhomeloans.com/sitemap.xml
-Sitemap: https://bondpeterhomeloans.com/sitemap-images.xml
-Sitemap: https://bondpeterhomeloans.com/sitemap-videos.xml
+Sitemap: https://bondmortgagesolutions.com/sitemap.xml
+Sitemap: https://bondmortgagesolutions.com/sitemap-images.xml
+Sitemap: https://bondmortgagesolutions.com/sitemap-videos.xml
