@@ -40,7 +40,6 @@
       "@type":"MortgageBroker",
       "@id":"https://bondmortgagesolutions.com/#org",
       "name":"Bond Mortgage Solutions",
-      "alternateName":"Bond Peter — Mortgage Loan Officer",
       "image":"https://bondmortgagesolutions.com/Bond%20Peter%20Logo.jpeg",
       "logo":"https://bondmortgagesolutions.com/Bond%20Peter%20Logo.jpeg",
       "url":"https://bondmortgagesolutions.com/",
@@ -60,15 +59,19 @@
         "name":"Mortgage Funding Solutions",
         "identifier":"NMLS #1972934"
       },
-      "founder":{
+      "employee":{
         "@type":"Person",
         "@id":"https://bondmortgagesolutions.com/about.html#person",
-        "name":"Bond Peter",
+        "name":"Peter Njoku",
         "jobTitle":"Mortgage Loan Officer",
         "identifier":"NMLS #2670329",
         "image":"https://bondmortgagesolutions.com/Peter%20Njoku.jpg"
       },
-      "sameAs":[]
+      "sameAs":[
+        "https://www.facebook.com/bondmortgagesolutions/",
+        "https://www.instagram.com/bond_peter0077/",
+        "https://www.tiktok.com/@chibubond"
+      ]
     }
   ]
 }
@@ -93,10 +96,7 @@
   "publisher":{"@id":"https://bondmortgagesolutions.com/#org"},
   "potentialAction":{
     "@type":"SearchAction",
-    "target":{
-      "@type":"EntryPoint",
-      "urlTemplate":"https://www.google.com/search?q=site%3Abondmortgagesolutions.com+{search_term_string}"
-    },
+    "target":"https://bondmortgagesolutions.com/?s={search_term_string}",
     "query-input":"required name=search_term_string"
   }
 }
