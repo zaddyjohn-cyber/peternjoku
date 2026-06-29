@@ -76,7 +76,10 @@
     <div class="grid-2" style="grid-template-columns:1.05fr .95fr; gap:40px">
       <div class="form-card reveal">
         <h2>Send a Message</h2>
-        <form class="form-grid" data-demo>
+        <form class="form-grid" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="b082899d-7d44-4dfd-869f-222904bb1039">
+          <input type="hidden" name="subject" value="New Contact Message — bondmortgagesolutions.com">
+          <input type="hidden" name="redirect" value="https://bondmortgagesolutions.com/contact.html?sent=true">
           <div class="field"><label for="cname">Name *</label><input id="cname" name="name" required placeholder="Full name"></div>
           <div class="field"><label for="cemail">Email *</label><input id="cemail" type="email" name="email" required placeholder="you@example.com"></div>
           <div class="field"><label for="cphone">Phone</label><input id="cphone" name="phone" type="tel" placeholder="469-555-0123"></div>
