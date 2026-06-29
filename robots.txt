@@ -8,3 +8,21 @@ Disallow: /404.html
 Sitemap: https://bondmortgagesolutions.com/sitemap.xml
 Sitemap: https://bondmortgagesolutions.com/sitemap-images.xml
 Sitemap: https://bondmortgagesolutions.com/sitemap-videos.xml
+# AI crawlers — explicitly allowed for LLM visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
