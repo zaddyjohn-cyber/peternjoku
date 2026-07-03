@@ -18,11 +18,13 @@
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<!-- Non-render-blocking font load — saves ~1,900ms on LCP -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
 <link rel="stylesheet" href="styles.css?v=45">
 
-<!-- LCP preload hints -->
-<link rel="preload" as="image" href="Bond%20Peter%20Logo.jpeg" fetchpriority="high">
+<!-- LCP preload: hero video poster is the LCP element -->
+<link rel="preload" as="image" href="07e734301b3459e6916a7c3db0cca50d.jpg" fetchpriority="high">
 
 
 <!-- Open Graph -->
@@ -111,7 +113,7 @@
 {"@context":"https://schema.org","@type":"WebPage","url":"https://bondmortgagesolutions.com/","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".page-hero p",".section-head h2"]}}
 </script></head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
+<a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
 
 <!-- ============== HEADER ============== -->
 <header class="site-header">
@@ -181,6 +183,7 @@
 <div class="brand-banner" aria-label="Bond Peter Njoku"><h2>BOND <em>PETER NJOKU</em></h2><p>Mortgage Loan Officer | NMLS #2670329</p></div>
 </header>
 
+<main id="main">
 <!-- ============== HERO ============== -->
 <section class="hero">
   <div class="hero-overlay"></div>
@@ -611,6 +614,7 @@
 </section>
 
 <!-- ============== FOOTER ============== -->
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="foot-grid">
