@@ -565,28 +565,27 @@ p{margin:0 0 1em}
 /* Two-column layout: text left, video card right */
 .hero-grid{
   display:grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(28px, 4vw, 56px);
-  align-items:center;
+  align-items:stretch;
 }
-.hero-content{ max-width: 620px }
+.hero-content{ max-width: 620px; display:flex; flex-direction:column; justify-content:center }
 @media (max-width: 980px){
-  .hero-grid{ grid-template-columns: 1fr; gap:40px }
+  .hero-grid{ grid-template-columns: 1fr; gap:40px; align-items:start }
   .hero-content{ max-width:none }
   .hero > .container{ padding: 0 24px }
 }
 
-/* Hero card — 16:9 landscape video */
+/* Hero card — 16:9 landscape video, fills full column height */
 .hero-card{
   position:relative; isolation:isolate;
   display:block;
   width: 100%;
-  max-width: 640px;
-  margin-inline: auto;
+  height: 100%;
+  min-height: 320px;
   border-radius: 18px;
   overflow:hidden;
   background:#000;
-  aspect-ratio: 16 / 9;
   box-shadow:
     0 30px 60px -22px rgba(0,0,0,.6),
     0 60px 120px -40px rgba(0,0,0,.55),
@@ -607,7 +606,7 @@ p{margin:0 0 1em}
   -webkit-backface-visibility: hidden;
 }
 @media (max-width: 980px){
-  .hero-card{ max-width: 100% }
+  .hero-card{ height:auto; aspect-ratio: 16/9; min-height:unset }
 }
 /* Subtle top corner sheen for the 3D feel — small, doesn't cover the video */
 .hero-card::before{
