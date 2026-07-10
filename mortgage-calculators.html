@@ -97,14 +97,14 @@
         <div>
           <h3 style="margin-top:0">Mortgage Payment Calculator</h3>
           <div class="calc-fields">
-            <div class="field full"><label>Home Price</label><input type="number" name="price" value="350000" min="50000" step="1000"></div>
-            <div class="field"><label>Down Payment (%)</label><div class="range-row"><input type="range" name="downPct" min="0" max="50" step="0.5" value="10"><input type="number" name="downPctText" value="10" min="0" max="50" step="0.5" style="width:84px"></div></div>
-            <div class="field"><label>Interest Rate (%)</label><div class="range-row"><input type="range" name="rate" min="2" max="10" step="0.05" value="6.5"><input type="number" name="rateText" value="6.5" min="2" max="10" step="0.05" style="width:84px"></div></div>
-            <div class="field"><label>Loan Term</label><select name="term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
-            <div class="field"><label>Property Tax (%/yr)</label><input type="number" name="taxPct" value="2.0" min="0" max="5" step="0.1"></div>
-            <div class="field"><label>Home Insurance ($/yr)</label><input type="number" name="insurance" value="1500" min="0" step="50"></div>
-            <div class="field"><label>HOA ($/mo)</label><input type="number" name="hoa" value="0" min="0" step="10"></div>
-            <div class="field"><label>PMI (%/yr)</label><input type="number" name="pmi" value="0.6" min="0" max="3" step="0.05"></div>
+            <div class="field full"><label for="mc-price">Home Price</label><input type="number" id="mc-price" name="price" value="350000" min="50000" step="1000"></div>
+            <div class="field"><label for="mc-downPct">Down Payment (%)</label><div class="range-row"><input type="range" id="mc-downPct" name="downPct" min="0" max="50" step="0.5" value="10" aria-label="Down payment percentage slider"><input type="number" name="downPctText" value="10" min="0" max="50" step="0.5" style="width:84px" aria-label="Down payment percentage"></div></div>
+            <div class="field"><label for="mc-rate">Interest Rate (%)</label><div class="range-row"><input type="range" id="mc-rate" name="rate" min="2" max="10" step="0.05" value="6.5" aria-label="Interest rate slider"><input type="number" name="rateText" value="6.5" min="2" max="10" step="0.05" style="width:84px" aria-label="Interest rate"></div></div>
+            <div class="field"><label for="mc-term">Loan Term</label><select id="mc-term" name="term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
+            <div class="field"><label for="mc-taxPct">Property Tax (%/yr)</label><input type="number" id="mc-taxPct" name="taxPct" value="2.0" min="0" max="5" step="0.1"></div>
+            <div class="field"><label for="mc-insurance">Home Insurance ($/yr)</label><input type="number" id="mc-insurance" name="insurance" value="1500" min="0" step="50"></div>
+            <div class="field"><label for="mc-hoa">HOA ($/mo)</label><input type="number" id="mc-hoa" name="hoa" value="0" min="0" step="10"></div>
+            <div class="field"><label for="mc-pmi">PMI (%/yr)</label><input type="number" id="mc-pmi" name="pmi" value="0.6" min="0" max="3" step="0.05"></div>
           </div>
         </div>
         <div class="calc-result">

@@ -425,20 +425,20 @@
           <div class="field">
             <label for="downPct">Down Payment (%)</label>
             <div class="range-row">
-              <input type="range" name="downPct" min="0" max="50" step="0.5" value="10">
-              <input type="number" name="downPctText" value="10" min="0" max="50" step="0.5" style="width:84px">
+              <input type="range" id="downPct" name="downPct" min="0" max="50" step="0.5" value="10" aria-label="Down payment percentage slider">
+              <input type="number" name="downPctText" value="10" min="0" max="50" step="0.5" style="width:84px" aria-label="Down payment percentage">
             </div>
           </div>
           <div class="field">
             <label for="rate">Interest Rate (%)</label>
             <div class="range-row">
-              <input type="range" name="rate" min="2" max="10" step="0.05" value="6.5">
-              <input type="number" name="rateText" value="6.5" min="2" max="10" step="0.05" style="width:84px">
+              <input type="range" id="rate" name="rate" min="2" max="10" step="0.05" value="6.5" aria-label="Interest rate slider">
+              <input type="number" name="rateText" value="6.5" min="2" max="10" step="0.05" style="width:84px" aria-label="Interest rate">
             </div>
           </div>
           <div class="field">
             <label for="term">Loan Term</label>
-            <select name="term">
+            <select id="term" name="term">
               <option value="30">30 years</option>
               <option value="20">20 years</option>
               <option value="15">15 years</option>
@@ -446,20 +446,20 @@
             </select>
           </div>
           <div class="field">
-            <label>Property Tax (% / yr)</label>
-            <input type="number" name="taxPct" value="2.0" min="0" max="5" step="0.1">
+            <label for="taxPct">Property Tax (% / yr)</label>
+            <input type="number" id="taxPct" name="taxPct" value="2.0" min="0" max="5" step="0.1">
           </div>
           <div class="field">
-            <label>Home Insurance ($/yr)</label>
-            <input type="number" name="insurance" value="1500" min="0" step="50">
+            <label for="insurance">Home Insurance ($/yr)</label>
+            <input type="number" id="insurance" name="insurance" value="1500" min="0" step="50">
           </div>
           <div class="field">
-            <label>HOA ($/mo)</label>
-            <input type="number" name="hoa" value="0" min="0" step="10">
+            <label for="hoa">HOA ($/mo)</label>
+            <input type="number" id="hoa" name="hoa" value="0" min="0" step="10">
           </div>
           <div class="field">
-            <label>PMI (% / yr)</label>
-            <input type="number" name="pmi" value="0.6" min="0" max="3" step="0.05">
+            <label for="pmi">PMI (% / yr)</label>
+            <input type="number" id="pmi" name="pmi" value="0.6" min="0" max="3" step="0.05">
           </div>
         </div>
         <p class="muted" style="font-size:.82rem; margin-top:14px">For estimation only. Actual rates and payments depend on credit, loan program, property, and other factors. Subject to credit approval.</p>
