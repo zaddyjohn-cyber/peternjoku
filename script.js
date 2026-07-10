@@ -58,6 +58,25 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
   }
 
+  // -------- Video lazy-play — load/play only when in viewport --------
+  if ('IntersectionObserver' in window) {
+    const videoObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        const v = e.target;
+        if (e.isIntersecting) {
+          if (v.readyState === 0) { v.load(); }
+          v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+    document.querySelectorAll('video[autoplay]').forEach(v => {
+      v.removeAttribute('autoplay');
+      videoObs.observe(v);
+    });
+  }
+
   // -------- Year stamp --------
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
