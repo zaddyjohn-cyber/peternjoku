@@ -350,7 +350,7 @@ p{margin:0 0 1em}
     radial-gradient(ellipse 60% 80% at 50% -20%, rgba(201,162,39,.22), transparent 60%),
     radial-gradient(ellipse 50% 70% at 10% 100%, rgba(40,83,140,.25), transparent 70%);
 }
-.brand-banner h2{
+.brand-banner .banner-title{
   margin:0;
   font-family: var(--font-head);
   font-size: clamp(1.4rem, 3.4vw, 2.2rem);
@@ -360,7 +360,7 @@ p{margin:0 0 1em}
   line-height:1.1;
   text-shadow: 0 2px 14px rgba(201,162,39,.25);
 }
-.brand-banner h2 em{
+.brand-banner .banner-title em{
   font-style:normal;
   color: var(--gold);
   font-weight:900;
@@ -1072,7 +1072,7 @@ p{margin:0 0 1em}
     0 2px 5px rgba(201,162,39,.6),
     0 0 8px rgba(201,162,39,.4);
 }
-.step h4{ margin:0 0 .4em; color:var(--navy); font-family:var(--font-head); font-size:1.22rem; font-weight:700 }
+.step h3{ margin:0 0 .4em; color:var(--navy); font-family:var(--font-head); font-size:1.22rem; font-weight:700 }
 .step p{ margin:0; color:var(--muted); line-height:1.55 }
 .steps{ counter-reset: step }
 .steps.cols-2{ grid-template-columns:1fr 1fr }
@@ -1405,8 +1405,8 @@ p{margin:0 0 1em}
 }
 .site-footer a{ color:#a8b4c9; transition:color .15s }
 .site-footer a:hover{ color:var(--gold-soft) }
-.site-footer ul{ list-style:none; padding:0; margin:0; display:grid; gap:10px }
-.site-footer ul a{ font-size:.93rem }
+.site-footer ul{ list-style:none; padding:0; margin:0; display:grid; gap:2px }
+.site-footer ul a{ font-size:.93rem; display:flex; align-items:center; min-height:44px; padding:0 4px }
 .foot-brand .brand-mark{ width:54px; height:54px }
 .foot-brand p{ color:#a6b3c8; font-size:.93rem; margin:18px 0; line-height:1.65 }
 .foot-contact > div{ display:flex; gap:12px; margin-bottom:14px; font-size:.93rem; align-items:flex-start; line-height:1.5 }
@@ -1525,7 +1525,7 @@ p{margin:0 0 1em}
 
 /* Footer social icons */
 .foot-social{display:flex;gap:.65rem;margin-top:1.1rem;align-items:center;flex-wrap:wrap}
-.foot-social a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);color:var(--white);transition:background .2s,transform .15s;flex-shrink:0}
+.foot-social a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:var(--white);transition:background .2s,transform .15s;flex-shrink:0}
 .foot-social a:hover{background:var(--gold);transform:translateY(-2px)}
 .foot-social svg{width:17px;height:17px;flex-shrink:0}
 
