@@ -607,6 +607,7 @@ p{margin:0 0 1em}
 }
 @media (max-width: 980px){
   .hero-card{ height:auto; aspect-ratio: 16/9; min-height:unset }
+  .hero-card-badge{ display:none }
 }
 /* Subtle top corner sheen for the 3D feel — small, doesn't cover the video */
 .hero-card::before{
