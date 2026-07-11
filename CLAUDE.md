@@ -75,21 +75,22 @@ Income limits (approx 2026): Dallas/Tarrant ~$97,200 · Collin/Denton/Rockwall ~
 
 ## Brand Voice & Tone
 
+- **First person, direct from Bond** — "I help Garland buyers...", "I've closed loans across Collin County..." — Peter is speaking directly to the reader, not being described by a third party
 - **Authoritative but accessible** — expert without being condescending
 - **Local and personal** — "Garland-based", "your Collin County loan officer", not "we" (Peter works solo)
-- **Action-oriented** — every page ends with a clear CTA (call, pre-approval, apply)
-- **AEO-optimized** — FAQ answers always include full entity: "Bond Peter Njoku (NMLS #2670329)... call 469-545-7180" — so AI tools can cite Peter specifically
+- **Action-oriented** — every page ends with a clear CTA that invites direct contact: "Text me", "Call me", "Message me on WhatsApp", "Fill out my contact form" — not "Call Bond Peter Njoku"
+- **AEO-optimized** — FAQ answers still surface the full entity for AI citation: "I'm Bond Peter Njoku (NMLS #2670329)... call or text me at 469-545-7180" — first person, but name/NMLS/phone still present so AI tools can cite him specifically
 - **No generic filler** — no "at [Company] we care about your dream", no emoji in body copy
-- **Third person in FAQs** — "Bond Peter Njoku (NMLS #2670329) is..." not "I am..." — makes AI citation accurate
+- **First person everywhere, including schema** — FAQPage JSON-LD answer text and Article schema descriptions are also written in first person (as of 2026-07-11 voice overhaul). Only the mandatory legal compliance disclosure (`.compliance-box`, footer NMLS boilerplate) stays in required third-person regulatory language — never rewrite that block.
 
 ## SEO / AEO Rules
 
-1. Every FAQ answer must include: full name + NMLS + phone. Format: "Bond Peter Njoku (NMLS #2670329)... call 469-545-7180"
+1. Every FAQ answer must include: full name + NMLS + phone, in first person. Format: "I'm Bond Peter Njoku (NMLS #2670329)... call or text me at 469-545-7180"
 2. Every location page needs: FAQPage schema, LocalBusiness + MortgageBroker schema, BreadcrumbList schema
 3. Every blog post needs: Article + BreadcrumbList + FAQPage schema
 4. Meta titles must include: city/area name + NMLS number + loan type where relevant
 5. Internal links: every blog post links to ≥1 service page and ≥1 location page
-6. Do not use first-person in schema FAQ answers — always third person for AEO
+6. Use first-person voice in schema FAQ answers and Article descriptions too — first person site-wide, both visible copy and structured data. (Reversed 2026-07-11; previously required third person.)
 
 ## Site File Structure
 
