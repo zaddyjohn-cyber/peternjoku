@@ -18,7 +18,8 @@
   if (header) {
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
     document.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    // Use rAF to avoid forced reflow on script execute
+    requestAnimationFrame(onScroll);
   }
 
   // -------- Mobile menu toggle --------
@@ -73,7 +74,13 @@
     }, { threshold: 0.25 });
     document.querySelectorAll('video[autoplay]').forEach(v => {
       v.removeAttribute('autoplay');
-      videoObs.observe(v);
+      const isHero = !!v.closest('.hero');
+      if (isHero) {
+        // Delay hero video so poster is the LCP element, not the video download
+        setTimeout(() => videoObs.observe(v), 2000);
+      } else {
+        videoObs.observe(v);
+      }
     });
   }
 
