@@ -75,13 +75,9 @@
     document.querySelectorAll('video[autoplay]').forEach(v => {
       v.removeAttribute('autoplay');
       const isHero = !!v.closest('.hero');
-      if (isHero && window.innerWidth < 1024) {
-        // Mobile/tablet: never load the hero video — poster is the LCP element
-        // This keeps LCP as the 37KB WebP poster instead of the 1.8MB video
-        return;
-      }
       if (isHero) {
-        // Desktop: small delay so poster paints first (LCP), then video loads
+        // Delay hero video so poster paints first as LCP, then video loads.
+        // Mobile gets peter_pinterest_mobile.mp4 (436KB) via <source media>.
         setTimeout(() => videoObs.observe(v), 800);
       } else {
         videoObs.observe(v);
