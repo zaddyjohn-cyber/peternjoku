@@ -99,21 +99,21 @@ html{
   -webkit-backdrop-filter: blur(12px) saturate(150%);
 }
 .mobile-cta-grid{
-  display:grid; grid-template-columns: 1fr 1fr 48px; gap:8px; align-items:center;
+  display:grid; grid-template-columns: 1fr 1fr 52px; gap:12px; align-items:center;
 }
 .mobile-cta .btn{ padding:13px 14px; font-size:.92rem; min-height:48px }
 .mobile-cta-call{
-  width:48px; height:48px; border-radius:50%;
+  width:52px; height:52px; border-radius:50%;
   display:grid; place-items:center;
   background:linear-gradient(140deg, var(--navy) 0%, var(--navy-700) 100%);
   color:#fff; box-shadow:0 6px 14px -4px rgba(11,31,58,.4);
   border:1px solid var(--gold);
 }
-.mobile-cta-call svg{ width:22px; height:22px }
+.mobile-cta-call svg{ width:24px; height:24px }
 @media (max-width: 720px){
   .mobile-cta{ display:block }
-  /* lift the WhatsApp FAB above the sticky bar */
-  .fab-whatsapp{ bottom: calc(80px + env(safe-area-inset-bottom)) }
+  /* lift the WhatsApp FAB above the sticky bar with sufficient spacing */
+  .fab-whatsapp{ bottom: calc(96px + env(safe-area-inset-bottom)) }
   /* leave room at the end of the document so content isn't hidden behind the bar */
   body{ padding-bottom: calc(64px + env(safe-area-inset-bottom)) }
 }
@@ -1811,7 +1811,7 @@ p{margin:0 0 1em}
 .blog-preview-card:hover{ box-shadow:0 8px 32px rgba(10,36,99,.10); transform:translateY(-3px) }
 .blog-preview-tag{
   display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--gold); background:rgba(201,162,39,.1);
+  text-transform:uppercase; color:var(--navy); background:rgba(201,162,39,.18);
   padding:3px 10px; border-radius:20px; width:fit-content;
 }
 .blog-preview-card h3{ font-size:1rem; line-height:1.45; color:var(--navy); margin:0 }
