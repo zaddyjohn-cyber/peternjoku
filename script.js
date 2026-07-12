@@ -75,9 +75,14 @@
     document.querySelectorAll('video[autoplay]').forEach(v => {
       v.removeAttribute('autoplay');
       const isHero = !!v.closest('.hero');
+      if (isHero && window.innerWidth < 1024) {
+        // Mobile/tablet: never load the hero video — poster is the LCP element
+        // This keeps LCP as the 37KB WebP poster instead of the 1.8MB video
+        return;
+      }
       if (isHero) {
-        // Delay hero video so poster is the LCP element, not the video download
-        setTimeout(() => videoObs.observe(v), 2000);
+        // Desktop: small delay so poster paints first (LCP), then video loads
+        setTimeout(() => videoObs.observe(v), 800);
       } else {
         videoObs.observe(v);
       }
@@ -141,12 +146,13 @@
     if (downOut) downOut.textContent = fmtMoney(down) + ' (' + downPct + '%)';
   }
 
-  document.querySelectorAll('[data-calc="mortgage"]').forEach(calc => {
-    bindRangeMirror(calc.querySelector('[name=downPct]'), calc.querySelector('[name=downPctText]'));
-    bindRangeMirror(calc.querySelector('[name=rate]'), calc.querySelector('[name=rateText]'));
-    calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', refreshCalc));
-    refreshCalc();
-  });
+  const initCalcs = () => {
+    document.querySelectorAll('[data-calc="mortgage"]').forEach(calc => {
+      bindRangeMirror(calc.querySelector('[name=downPct]'), calc.querySelector('[name=downPctText]'));
+      bindRangeMirror(calc.querySelector('[name=rate]'), calc.querySelector('[name=rateText]'));
+      calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', refreshCalc));
+      refreshCalc();
+    });
 
   // -------- Affordability calculator --------
   function refreshAfford() {
@@ -183,10 +189,10 @@
     const dlo = calc.querySelector('[data-out=loan]');
     if (dlo) dlo.textContent = fmtMoney(est * 0.8);
   }
-  document.querySelectorAll('[data-calc="afford"]').forEach(calc => {
-    calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', refreshAfford));
-    refreshAfford();
-  });
+    document.querySelectorAll('[data-calc="afford"]').forEach(calc => {
+      calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', refreshAfford));
+      refreshAfford();
+    });
 
   // -------- Refinance calculator --------
   function refreshRefi() {
@@ -214,10 +220,10 @@
     const be = calc.querySelector('[data-out=breakeven]');
     if (be) be.textContent = monthlySaving > 0 ? breakeven + ' months' : 'N/A';
   }
-  document.querySelectorAll('[data-calc="refi"]').forEach(calc => {
-    calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', refreshRefi));
-    refreshRefi();
-  });
+    document.querySelectorAll('[data-calc="refi"]').forEach(calc => {
+      calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', refreshRefi));
+      refreshRefi();
+    });
 
   // -------- Amortization mini-table --------
   function buildAmort() {
@@ -249,10 +255,17 @@
       if (balance <= 0) break;
     }
   }
-  document.querySelectorAll('[data-calc="amort"]').forEach(calc => {
-    calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', buildAmort));
-    buildAmort();
-  });
+    document.querySelectorAll('[data-calc="amort"]').forEach(calc => {
+      calc.querySelectorAll('input, select').forEach(i => i.addEventListener('input', buildAmort));
+      buildAmort();
+    });
+  };
+  // Defer all calculator init until after first paint to avoid forced reflow
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initCalcs, { timeout: 2000 });
+  } else {
+    setTimeout(initCalcs, 300);
+  }
 
   // -------- Glossary search --------
   const glossInput = document.getElementById('glossary-search');
