@@ -339,6 +339,46 @@
     });
   });
 
+  // -------- FAQ list accordion (combo pages) --------
+  document.querySelectorAll('.faq-list .faq-item').forEach((item, i) => {
+    const h3 = item.querySelector('h3');
+    const p  = item.querySelector('p');
+    if (!h3 || !p) return;
+
+    // Wrap answer in collapsible div
+    const body = document.createElement('div');
+    body.className = 'faq-body';
+    body.appendChild(p);
+    item.appendChild(body);
+
+    // Button trigger
+    const btn = document.createElement('button');
+    btn.className = 'faq-trigger';
+    btn.setAttribute('aria-expanded', i === 0 ? 'true' : 'false');
+    btn.setAttribute('aria-controls', `faq-body-${i}`);
+    btn.innerHTML = h3.innerHTML;
+    body.id = `faq-body-${i}`;
+
+    h3.replaceWith(btn);
+
+    // Open first by default
+    if (i === 0) item.classList.add('is-open');
+
+    btn.addEventListener('click', () => {
+      const open = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open);
+      // Close siblings
+      if (open) {
+        item.closest('.faq-list').querySelectorAll('.faq-item').forEach(s => {
+          if (s !== item) {
+            s.classList.remove('is-open');
+            s.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  });
+
   // -------- Service worker registration --------
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     window.addEventListener('load', () => {

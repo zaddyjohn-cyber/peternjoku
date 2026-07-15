@@ -1736,6 +1736,89 @@ p{margin:0 0 1em}
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
+/* ---------- FAQ List — combo pages accordion ---------- */
+.faq-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  max-width: 860px;
+  margin: 0 auto;
+}
+.faq-list .faq-item{
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  transition: background .18s;
+}
+.faq-list .faq-item:last-child{ border-bottom: none }
+.faq-list .faq-item.is-open{
+  background: #FDFAF4;
+}
+.faq-trigger{
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 22px 28px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  cursor: pointer;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  transition: color .15s;
+}
+.faq-trigger:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+.faq-trigger::after{
+  content: "";
+  flex: 0 0 30px;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--warm)
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A6841A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>")
+    no-repeat center;
+  transition: transform .3s var(--ease), background-color .2s;
+}
+.faq-item.is-open .faq-trigger{
+  color: var(--gold-deep);
+}
+.faq-item.is-open .faq-trigger::after{
+  transform: rotate(180deg);
+  background-color: var(--gold);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+}
+.faq-body{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .32s var(--ease);
+  overflow: hidden;
+}
+.faq-item.is-open .faq-body{
+  grid-template-rows: 1fr;
+}
+.faq-body p{
+  min-height: 0;
+  margin: 0;
+  padding: 0 28px 24px;
+  color: var(--muted);
+  font-size: .97rem;
+  line-height: 1.72;
+  border-left: 3px solid var(--gold);
+  margin-left: 28px;
+  padding-left: 18px;
+  margin-right: 28px;
+  margin-bottom: 22px;
+}
+
 /* City combo page grid */
 .city-grid{
   display: grid;
