@@ -7,3 +7,6 @@ desktop.ini
 node_modules/
 .env
 .env.*
+
+# Claude Code local state (worktrees, local settings — may contain credentials)
+.claude/
