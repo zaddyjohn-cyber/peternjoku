@@ -46,10 +46,29 @@ Income limits (approx 2026): Dallas/Tarrant ~$97,200 · Collin/Denton/Rockwall ~
 ## Priority Keywords (Target for #1 Google ranking)
 
 ### Tier 1 — Quick wins (30–60 days)
-- "USDA loan Rockwall TX" — low competition, USDA-eligible area
-- "FHA loan Garland TX" — specific loan + city
-- "mortgage broker near me Garland TX" — local intent, near-term
-- "USDA loan Forney TX" — USDA-eligible, low competition
+*Reordered 2026-07-27 after reading the actual SERPs in a browser. Notes below are
+what the top 10 contained on that date, not assumptions.*
+
+- **"USDA loan Forney TX"** — weakest SERP found. A Facebook post ranks page 1, and
+  no competitor has a dedicated page. Four of seven results are generic national
+  explainers (US Bank, FirstBank, rd.usda.gov); one is Redfin property listings,
+  which is the wrong intent entirely. Winnable on relevance, not authority.
+- **"USDA loan Rockwall TX"** — only 1 of 7 results is genuinely Rockwall-specific.
+  The rest are national explainers ranking on domain authority (Bankrate, US Bank),
+  which is harder to displace than an absent competitor. Second, not first.
+- **"prosper mortgage officer" / "prosper tx loan officer"** — 3 directories (Yelp,
+  Zillow, FastExpert), 2 job boards, 1 false match on "Prosperity", and only one
+  real local competitor. Page rewritten 2026-07-27; measuring to 2026-08-27.
+- "mortgage broker near me Garland TX" — local intent, near-term.
+  **Caveat:** "near me" queries resolve to the local pack, not web results. 74 such
+  queries drove 342 impressions and 0 clicks in 30 days. The lever is GBP
+  verification, not page content — don't expect a page to win these.
+
+**Moved out of Tier 1: "FHA loan Garland TX".** The SERP does not support a quick
+win. Six of eight results genuinely target Garland + FHA, including an exact-match
+domain (garlandmortgages.com), the Garland Housing Finance Corporation, and several
+dedicated lender pages. This is an entrenched market — treat it as Tier 3 and do not
+plan around a 30–60 day result.
 
 ### Tier 2 — Medium term (60–90 days)
 - "mortgage lender Garland TX"
@@ -59,6 +78,8 @@ Income limits (approx 2026): Dallas/Tarrant ~$97,200 · Collin/Denton/Rockwall ~
 - "first time homebuyer programs Garland TX"
 
 ### Tier 3 — Longer term (90–180 days)
+- "FHA loan Garland TX" — *demoted from Tier 1 on 2026-07-27, see note above.
+  Exact-match domain and 6 of 8 results are dedicated local pages.*
 - "mortgage lender Dallas TX"
 - "FHA loan Dallas TX"
 - "VA loan DFW TX"
