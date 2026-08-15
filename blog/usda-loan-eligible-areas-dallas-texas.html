@@ -153,6 +153,200 @@
 
     <p>USDA loans offer zero down payment financing — one of the last truly no-down-payment mortgage programs available to everyday buyers. But they're only available in USDA-designated eligible areas, and the map around Dallas is more nuanced than most buyers realize. This guide shows you which DFW suburbs qualify in 2026, how to check a specific address, and what the income limits mean for your household.</p>
 
+    <style>
+      .uc-tool{border:1px solid var(--line,#dfe3ea);border-radius:var(--radius,10px);overflow:hidden;margin:28px 0;background:var(--white,#fff);box-shadow:var(--shadow-sm,0 1px 3px rgba(0,0,0,.08))}
+      .uc-head{background:var(--navy,#0a2342);color:#fff;padding:16px 20px}
+      .uc-head h2{margin:0;font-size:1.18rem;color:#fff;border:0;padding:0}
+      .uc-head p{margin:6px 0 0;font-size:.87rem;opacity:.86}
+      .uc-tabs{display:flex;border-bottom:1px solid var(--line,#dfe3ea);background:var(--offwhite,#f6f7f9)}
+      .uc-tab{flex:1;padding:12px 10px;border:0;background:none;font:inherit;font-weight:600;font-size:.92rem;cursor:pointer;color:var(--muted,#5b6675);border-bottom:3px solid transparent}
+      .uc-tab[aria-selected="true"]{color:var(--navy,#0a2342);border-bottom-color:var(--gold,#c8a04a);background:var(--white,#fff)}
+      .uc-panel{padding:20px}
+      .uc-panel[hidden]{display:none}
+      .uc-field{margin-bottom:14px}
+      .uc-field label{display:block;font-weight:600;font-size:.88rem;margin-bottom:5px;color:var(--ink,#1b2430)}
+      .uc-field select,.uc-field input{width:100%;padding:10px 12px;border:1px solid var(--line,#dfe3ea);border-radius:var(--radius-sm,6px);font:inherit;font-size:.95rem;background:#fff;color:var(--ink,#1b2430)}
+      .uc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+      .uc-btn{width:100%;padding:12px;border:0;border-radius:var(--radius-sm,6px);background:var(--navy,#0a2342);color:#fff;font:inherit;font-weight:600;font-size:.97rem;cursor:pointer;margin-top:4px}
+      .uc-btn:hover{background:var(--warm-deep,#12325c)}
+      .uc-out{margin-top:16px;padding:15px 16px;border-radius:var(--radius-sm,6px);font-size:.93rem;line-height:1.55;border-left:4px solid}
+      .uc-out[hidden]{display:none}
+      .uc-yes{background:#eef7f0;border-color:#1a7a3c;color:#14562b}
+      .uc-maybe{background:#fdf6e8;border-color:#c8891a;color:#7a5310}
+      .uc-no{background:#fdeeea;border-color:#b8461a;color:#7d2f11}
+      .uc-out strong{display:block;margin-bottom:5px;font-size:1rem}
+      .uc-math{margin:10px 0 0;padding:10px 12px;background:rgba(255,255,255,.65);border-radius:4px;font-size:.86rem}
+      .uc-math span{display:flex;justify-content:space-between;padding:2px 0}
+      .uc-math .uc-tot{border-top:1px solid rgba(0,0,0,.16);margin-top:5px;padding-top:5px;font-weight:700}
+      .uc-note{font-size:.82rem;color:var(--muted,#5b6675);margin:14px 0 0;line-height:1.5}
+    </style>
+
+    <div class="uc-tool" id="usda-checker">
+      <div class="uc-head">
+        <h2>Check your USDA eligibility</h2>
+        <p>Two things decide it: where the home is, and what your household earns. Check both below.</p>
+      </div>
+      <div class="uc-tabs" role="tablist">
+        <button class="uc-tab" role="tab" id="uc-t1" aria-controls="uc-p1" aria-selected="true" type="button">1 · Is the area eligible?</button>
+        <button class="uc-tab" role="tab" id="uc-t2" aria-controls="uc-p2" aria-selected="false" type="button">2 · Is my income under the limit?</button>
+      </div>
+
+      <div class="uc-panel" id="uc-p1" role="tabpanel" aria-labelledby="uc-t1">
+        <div class="uc-field">
+          <label for="uc-city">Pick the city you're buying in</label>
+          <select id="uc-city">
+            <option value="">Select a city…</option>
+          </select>
+        </div>
+        <button class="uc-btn" type="button" id="uc-city-btn">Check this area</button>
+        <div class="uc-out" id="uc-city-out" hidden role="status"></div>
+        <p class="uc-note">USDA eligibility is drawn address by address, not city by city — two homes on the same street can differ. This tells you what to expect, then verify the exact address on USDA's official map.</p>
+      </div>
+
+      <div class="uc-panel" id="uc-p2" role="tabpanel" aria-labelledby="uc-t2" hidden>
+        <div class="uc-grid">
+          <div class="uc-field">
+            <label for="uc-people">People in household</label>
+            <select id="uc-people">
+              <option value="4">1–4 people</option>
+              <option value="8">5–8 people</option>
+            </select>
+          </div>
+          <div class="uc-field">
+            <label for="uc-income">Total gross household income</label>
+            <input type="number" id="uc-income" min="0" step="1000" placeholder="95000" inputmode="numeric">
+          </div>
+        </div>
+        <div class="uc-grid">
+          <div class="uc-field">
+            <label for="uc-dep">Dependents under 18</label>
+            <input type="number" id="uc-dep" min="0" max="12" step="1" value="0" inputmode="numeric">
+          </div>
+          <div class="uc-field">
+            <label for="uc-care">Yearly childcare cost (under 12)</label>
+            <input type="number" id="uc-care" min="0" step="100" value="0" placeholder="0" inputmode="numeric">
+          </div>
+        </div>
+        <div class="uc-grid">
+          <div class="uc-field">
+            <label for="uc-stu">Full-time students 18+</label>
+            <input type="number" id="uc-stu" min="0" max="12" step="1" value="0" inputmode="numeric">
+          </div>
+          <div class="uc-field">
+            <label for="uc-dis">Disabled household members</label>
+            <input type="number" id="uc-dis" min="0" max="12" step="1" value="0" inputmode="numeric">
+          </div>
+        </div>
+        <button class="uc-btn" type="button" id="uc-inc-btn">Calculate my adjusted income</button>
+        <div class="uc-out" id="uc-inc-out" hidden role="status"></div>
+        <p class="uc-note">Count the gross income of <em>every</em> adult who will live in the home — not just the people on the loan. That single rule catches out more buyers than any other.</p>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      var LIM={4:112450,8:148450};
+      var CITIES=[
+        ["Forney (75126) — Kaufman Co.","maybe","Forney has grown fast. Newer subdivisions on the outer edges are usually eligible; the older core near downtown often is not."],
+        ["Terrell (75160) — Kaufman Co.","yes","Most of Terrell is eligible, with the small historic downtown core the main exception."],
+        ["Kaufman (75142) — Kaufman Co.","yes","Generally eligible throughout."],
+        ["Royse City (75189) — Rockwall Co.","yes","One of the more reliably eligible areas — it hasn't crossed the population threshold that triggers re-designation."],
+        ["Fate (75087) — Rockwall Co.","maybe","Growing quickly; outer areas more likely eligible than newer central developments."],
+        ["Heath (75032) — Rockwall Co.","maybe","Mixed. Verify the specific address."],
+        ["Rockwall city (75032/75087)","maybe","The city proper has grown past easy eligibility in many areas; outskirts are your better bet."],
+        ["Greenville (75401) — Hunt Co.","yes","Generally eligible."],
+        ["Commerce (75428) — Hunt Co.","yes","Generally eligible."],
+        ["Quinlan (75474) — Hunt Co.","yes","Generally eligible."],
+        ["Caddo Mills (75135) — Hunt Co.","yes","Generally eligible."],
+        ["Ennis (75119) — Ellis Co.","yes","Generally eligible."],
+        ["Ferris (75125) — Ellis Co.","yes","Generally eligible."],
+        ["Waxahachie (75165) — Ellis Co.","maybe","Central Waxahachie is often excluded; surrounding areas frequently qualify."],
+        ["Midlothian (76065) — Ellis Co.","maybe","Substantial growth has reduced eligible territory. Verify the address."],
+        ["Red Oak (75154) — Ellis Co.","maybe","Mixed — check the specific property."],
+        ["Corsicana (75110) — Navarro Co.","yes","Generally eligible."],
+        ["Athens (75751) — Henderson Co.","yes","Generally eligible."],
+        ["Mabank (75147) — Henderson Co.","yes","Generally eligible."],
+        ["Alvarado (76009) — Johnson Co.","yes","Generally eligible."],
+        ["Joshua (76058) — Johnson Co.","yes","Generally eligible."],
+        ["Cleburne (76033) — Johnson Co.","maybe","Outer areas more likely than the city centre."],
+        ["Burleson (76028) — Johnson Co.","maybe","Much of Burleson has grown past eligibility; verify."],
+        ["Farmersville (75442) — Collin Co.","yes","Generally eligible."],
+        ["Princeton (75407) — Collin Co.","maybe","Rapid growth is shrinking eligible territory."],
+        ["Anna (75409) — Collin Co.","maybe","Rapid growth — verify the address."],
+        ["Melissa (75454) — Collin Co.","maybe","Rapid growth — verify the address."],
+        ["Sanger (76266) — Denton Co.","yes","Generally eligible."],
+        ["Pilot Point (76258) — Denton Co.","yes","Generally eligible."],
+        ["Aubrey (76227) — Denton Co.","maybe","Mixed and changing quickly."],
+        ["Dallas","no",""],["Garland","no",""],["Mesquite","no",""],["Plano","no",""],
+        ["Frisco","no",""],["McKinney","no",""],["Allen","no",""],["Richardson","no",""],
+        ["Irving","no",""],["Arlington","no",""],["Fort Worth","no",""],["Denton (city)","no",""],
+        ["Lewisville","no",""],["Flower Mound","no",""],["Grapevine","no",""],["Mansfield","no",""],
+        ["Southlake","no",""],["Prosper","no",""],["Rowlett","no",""],["Wylie","no",""]
+      ];
+      var sel=document.getElementById('uc-city');
+      CITIES.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=c[0];sel.appendChild(o);});
+
+      function tab(on,off,pon,poff){
+        document.getElementById(on).setAttribute('aria-selected','true');
+        document.getElementById(off).setAttribute('aria-selected','false');
+        document.getElementById(pon).hidden=false;
+        document.getElementById(poff).hidden=true;
+      }
+      document.getElementById('uc-t1').onclick=function(){tab('uc-t1','uc-t2','uc-p1','uc-p2');};
+      document.getElementById('uc-t2').onclick=function(){tab('uc-t2','uc-t1','uc-p2','uc-p1');};
+
+      var MAP='<a href="https://eligibility.sc.egov.usda.gov/eligibility/welcomeAction.do" target="_blank" rel="noopener">USDA’s official eligibility map</a>';
+      var CALL='<a href="tel:+14695457180">469-545-7180</a>';
+
+      document.getElementById('uc-city-btn').onclick=function(){
+        var out=document.getElementById('uc-city-out');
+        if(sel.value===''){out.hidden=false;out.className='uc-out uc-maybe';out.innerHTML='<strong>Pick a city first</strong>Choose from the list above and I’ll tell you what to expect.';return;}
+        var c=CITIES[+sel.value];out.hidden=false;
+        if(c[1]==='yes'){
+          out.className='uc-out uc-yes';
+          out.innerHTML='<strong>Likely eligible — worth pursuing</strong>'+c[2]+' Confirm the exact address on '+MAP+', then check your income on the next tab. Want me to verify it for you? Call or text '+CALL+' — it takes about a minute.';
+        }else if(c[1]==='maybe'){
+          out.className='uc-out uc-maybe';
+          out.innerHTML='<strong>Partly eligible — the address decides it</strong>'+c[2]+' Check the specific property on '+MAP+' before you write an offer. I check addresses free before clients tour a home — call or text '+CALL+'.';
+        }else{
+          out.className='uc-out uc-no';
+          out.innerHTML='<strong>Not USDA eligible</strong>This is inside the Dallas–Fort Worth metro area, which USDA excludes from its rural housing program. That doesn’t end the conversation: <a href="../fha-loans.html">FHA</a> needs 3.5% down with no location limits, and <a href="../down-payment-assistance.html">down payment assistance</a> can cover much of that. Call or text '+CALL+' and I’ll show you the numbers.';
+        }
+      };
+
+      function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
+      document.getElementById('uc-inc-btn').onclick=function(){
+        var out=document.getElementById('uc-inc-out');
+        var g=parseFloat(document.getElementById('uc-income').value);
+        if(!(g>0)){out.hidden=false;out.className='uc-out uc-maybe';out.innerHTML='<strong>Enter your household income</strong>Add up the gross income of every adult who will live in the home.';return;}
+        var size=document.getElementById('uc-people').value,lim=LIM[size];
+        var dep=+document.getElementById('uc-dep').value||0,stu=+document.getElementById('uc-stu').value||0,
+            dis=+document.getElementById('uc-dis').value||0,care=parseFloat(document.getElementById('uc-care').value)||0;
+        var ded=(dep+stu+dis)*480+care, adj=Math.max(0,g-ded), diff=lim-adj;
+        var rows='<div class="uc-math"><span><em>Gross household income</em><em>'+money(g)+'</em></span>';
+        if(dep)rows+='<span><em>'+dep+' dependent'+(dep>1?'s':'')+' × $480</em><em>−'+money(dep*480)+'</em></span>';
+        if(stu)rows+='<span><em>'+stu+' student'+(stu>1?'s':'')+' × $480</em><em>−'+money(stu*480)+'</em></span>';
+        if(dis)rows+='<span><em>'+dis+' disabled member'+(dis>1?'s':'')+' × $480</em><em>−'+money(dis*480)+'</em></span>';
+        if(care)rows+='<span><em>Documented childcare</em><em>−'+money(care)+'</em></span>';
+        rows+='<span class="uc-tot"><em>Adjusted annual income</em><em>'+money(adj)+'</em></span>';
+        rows+='<span><em>'+(size==='4'?'1–4':'5–8')+' person limit</em><em>'+money(lim)+'</em></span></div>';
+        out.hidden=false;
+        if(adj<=lim){
+          out.className='uc-out uc-yes';
+          out.innerHTML='<strong>Under the limit by '+money(diff)+'</strong>On these numbers your household qualifies on income for a USDA loan in the DFW-area eligible counties.'+rows+'Next: confirm the property address is in an eligible area. Call or text '+CALL+' and I’ll verify both properly.';
+        }else if(diff>-6000){
+          out.className='uc-out uc-maybe';
+          out.innerHTML='<strong>Over by '+money(-diff)+' — but this is close</strong>Don’t give up here. A gap this size is often closed by deductions people forget to document — particularly childcare for children under 12, which comes off dollar for dollar.'+rows+'Call or text '+CALL+' and I’ll audit your deductions before we rule USDA out.';
+        }else{
+          out.className='uc-out uc-no';
+          out.innerHTML='<strong>Over the limit by '+money(-diff)+'</strong>USDA looks unlikely on income alone.'+rows+'That’s not the end of it — <a href="../fha-loans.html">FHA</a> and <a href="../conventional-loans.html">conventional</a> loans have no income cap at all. Call or text '+CALL+' and I’ll run those side by side for you.';
+        }
+      };
+    })();
+    </script>
+
+    <p class="uc-note" style="margin-bottom:26px">This tool is a guide, not an eligibility determination. Area classifications reflect general patterns as of 2026 and USDA revises its maps periodically; income limits shown are approximate 2026 figures for the USDA-eligible counties around DFW. Always confirm a specific address and your current county limit before making a purchase decision.</p>
+
     <h2>Why USDA Loans Are Worth Understanding</h2>
     <p>A <a href="../usda-loans.html">USDA guaranteed loan</a> lets you buy a home with zero down payment, no private mortgage insurance (PMI), and competitive fixed rates. The annual guarantee fee — which replaces PMI — is just 0.35% of the loan balance, significantly lower than FHA's mortgage insurance premium. For buyers who qualify, this is often the lowest monthly payment option available.</p>
     <p>The catch: the home must be in a USDA-eligible area, and your household income must fall within the program's limits. Both are more achievable than many buyers assume.</p>
