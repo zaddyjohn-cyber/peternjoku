@@ -876,4 +876,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Added 2026-08-17: Tier 6 FTHB city guides -->
+  <url><loc>https://bondmortgagesolutions.com/blog/first-time-homebuyer-guide-grapevine-tx-2026.html</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/first-time-homebuyer-guide-mansfield-tx-2026.html</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/first-time-homebuyer-guide-southlake-tx-2026.html</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/first-time-homebuyer-guide-royse-city-tx-2026.html</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/first-time-homebuyer-guide-forney-tx-2026.html</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
