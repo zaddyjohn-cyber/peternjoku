@@ -1953,3 +1953,10 @@ p{margin:0 0 1em}
 .gps-close{background:none;border:none;color:#fff;cursor:pointer;font-size:1rem;opacity:.7;padding:0 4px;flex-shrink:0}
 .gps-close:hover{opacity:1}
 @media(max-width:640px){.gps-strip{flex-wrap:wrap;gap:6px}}
+
+/* -------- GPS inline article block -------- */
+.gps-article-block{background:#f0f6ff;border:1px solid #c2d8f5;border-radius:8px;padding:20px 24px;margin:28px 0;text-align:center}
+.gps-article-label{font-weight:700;color:#1a3a5c;margin-bottom:6px;font-size:1rem}
+.gps-article-block p{color:#374151;font-size:.93rem;margin-bottom:14px}
+.gps-article-btn{display:inline-block;background:#1a3a5c;color:#fff;font-weight:600;font-size:.9rem;padding:10px 22px;border-radius:6px;text-decoration:none}
+.gps-article-btn:hover{background:#f5a623;color:#1a3a5c}

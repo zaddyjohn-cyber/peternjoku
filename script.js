@@ -383,22 +383,34 @@
   (function () {
     const PREF_URL = 'https://www.google.com/preferences/source?q=bondmortgagesolutions.com';
     const STORAGE_KEY = 'gps_dismissed';
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
 
-    const strip = document.createElement('div');
-    strip.className = 'gps-strip';
-    strip.innerHTML = `
-      <span class="gps-star">&#9733;</span>
-      <span class="gps-text">Find my mortgage content faster on Google — <a href="${PREF_URL}" target="_blank" rel="noopener">add bondmortgagesolutions.com as a preferred source</a>.</span>
-      <button class="gps-close" aria-label="Dismiss">&#10005;</button>`;
+    // Strip above footer (all pages)
+    if (!sessionStorage.getItem(STORAGE_KEY)) {
+      const strip = document.createElement('div');
+      strip.className = 'gps-strip';
+      strip.innerHTML =
+        '<span class="gps-star">&#9733;</span>' +
+        '<span class="gps-text">Find my mortgage content faster on Google — <a href="' + PREF_URL + '" target="_blank" rel="noopener">add bondmortgagesolutions.com as a preferred source</a>.</span>' +
+        '<button class="gps-close" aria-label="Dismiss">&#10005;</button>';
+      strip.querySelector('.gps-close').addEventListener('click', function () {
+        strip.remove();
+        sessionStorage.setItem(STORAGE_KEY, '1');
+      });
+      var footer = document.querySelector('footer.site-footer');
+      if (footer) footer.insertAdjacentElement('beforebegin', strip);
+    }
 
-    strip.querySelector('.gps-close').addEventListener('click', () => {
-      strip.remove();
-      sessionStorage.setItem(STORAGE_KEY, '1');
-    });
-
-    const footer = document.querySelector('footer.site-footer');
-    if (footer) footer.insertAdjacentElement('beforebegin', strip);
+    // Inline block at end of blog articles
+    var articleCta = document.querySelector('.article-cta');
+    if (articleCta) {
+      var block = document.createElement('div');
+      block.className = 'gps-article-block';
+      block.innerHTML =
+        '<p class="gps-article-label">&#9733; Reading this on Google?</p>' +
+        '<p>You can mark <strong>bondmortgagesolutions.com</strong> as a preferred source so my articles surface first in your Google results, AI Overviews, and Top Stories.</p>' +
+        '<a href="' + PREF_URL + '" target="_blank" rel="noopener" class="gps-article-btn">Add as a Google preferred source</a>';
+      articleCta.insertAdjacentElement('afterend', block);
+    }
   })();
 
   // -------- Service worker registration --------
