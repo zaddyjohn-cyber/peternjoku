@@ -1943,3 +1943,13 @@ p{margin:0 0 1em}
 .blog-preview-cta{ text-align:center; margin-top:40px }
 @media(max-width:1000px){ .blog-preview-grid{ grid-template-columns:repeat(2,1fr) } }
 @media(max-width:640px){ .blog-preview-grid{ grid-template-columns:1fr } .blog-preview-section{ padding:56px 0 } }
+
+/* -------- Google Preferred Sources strip -------- */
+.gps-strip{display:flex;align-items:center;gap:10px;background:#1a3a5c;color:#fff;padding:10px 20px;font-size:.88rem;line-height:1.4;position:relative}
+.gps-star{color:#f5a623;font-size:1.1rem;flex-shrink:0}
+.gps-text{flex:1}
+.gps-text a{color:#f5a623;font-weight:600;text-decoration:underline}
+.gps-text a:hover{color:#ffc85a}
+.gps-close{background:none;border:none;color:#fff;cursor:pointer;font-size:1rem;opacity:.7;padding:0 4px;flex-shrink:0}
+.gps-close:hover{opacity:1}
+@media(max-width:640px){.gps-strip{flex-wrap:wrap;gap:6px}}

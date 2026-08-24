@@ -379,6 +379,28 @@
     });
   });
 
+  // -------- Google Preferred Sources CTA --------
+  (function () {
+    const PREF_URL = 'https://www.google.com/preferences/source?q=bondmortgagesolutions.com';
+    const STORAGE_KEY = 'gps_dismissed';
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+
+    const strip = document.createElement('div');
+    strip.className = 'gps-strip';
+    strip.innerHTML = `
+      <span class="gps-star">&#9733;</span>
+      <span class="gps-text">Find my mortgage content faster on Google — <a href="${PREF_URL}" target="_blank" rel="noopener">add bondmortgagesolutions.com as a preferred source</a>.</span>
+      <button class="gps-close" aria-label="Dismiss">&#10005;</button>`;
+
+    strip.querySelector('.gps-close').addEventListener('click', () => {
+      strip.remove();
+      sessionStorage.setItem(STORAGE_KEY, '1');
+    });
+
+    const footer = document.querySelector('footer.site-footer');
+    if (footer) footer.insertAdjacentElement('beforebegin', strip);
+  })();
+
   // -------- Service worker registration --------
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     window.addEventListener('load', () => {
