@@ -1516,6 +1516,29 @@ p{margin:0 0 1em}
 }
 .article-body .compliance-box{ font-size:.92rem; margin-top:2.5em }
 
+/* Data tables — service pages + blog comparison/requirement tables */
+.data-table{
+  width:100%; border-collapse:collapse; margin:1.4em 0 1.8em;
+  font-size:.95rem; background:var(--white);
+  border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden;
+  display:block; overflow-x:auto; -webkit-overflow-scrolling:touch;
+}
+.data-table tr{ border-bottom:1px solid var(--line) }
+.data-table tr:last-child{ border-bottom:none }
+.data-table th, .data-table td{
+  padding:.7em 1em; text-align:left; vertical-align:top; white-space:normal;
+}
+.data-table th{
+  background:var(--navy-50); color:var(--navy); font-weight:700;
+  white-space:nowrap;
+}
+.data-table tr > th:first-child:not([scope]){ width:auto }
+.data-table tbody tr:nth-child(even), .data-table tr:nth-child(even){ background:rgba(234,239,247,.4) }
+@media (max-width:640px){
+  .data-table{ font-size:.85rem }
+  .data-table th, .data-table td{ padding:.55em .75em }
+}
+
 /* Footer social icons */
 .foot-social{display:flex;gap:.65rem;margin-top:1.1rem;align-items:center;flex-wrap:wrap}
 .foot-social a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:var(--white);transition:background .2s,transform .15s;flex-shrink:0}

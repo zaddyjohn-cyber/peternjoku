@@ -4,7 +4,7 @@
   <url><loc>https://bondmortgagesolutions.com/about.html</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://bondmortgagesolutions.com/loan-options.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bondmortgagesolutions.com/fha-loans.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bondmortgagesolutions.com/conventional-loans.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/conventional-loans.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bondmortgagesolutions.com/va-loans.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bondmortgagesolutions.com/usda-loans.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bondmortgagesolutions.com/refinance.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -931,4 +931,10 @@
   <url><loc>https://bondmortgagesolutions.com/blog/gift-funds-down-payment-texas-mortgage.html</loc><lastmod>2026-09-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bondmortgagesolutions.com/blog/new-job-mortgage-qualify-texas.html</loc><lastmod>2026-09-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bondmortgagesolutions.com/blog/low-appraisal-texas-mortgage-what-to-do.html</loc><lastmod>2026-09-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Added 2026-09-17: Conventional loan requirements cluster (content-only strategy, GSC's highest-impression query) -->
+  <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-credit-score-tiers-texas-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-pmi-cost-explained-texas-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-limits-dfw-counties-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-down-payment-assistance-stacking-texas-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
