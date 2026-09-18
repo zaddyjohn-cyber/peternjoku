@@ -937,4 +937,36 @@
   <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-pmi-cost-explained-texas-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-limits-dfw-counties-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://bondmortgagesolutions.com/blog/conventional-loan-down-payment-assistance-stacking-texas-2026.html</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Added 2026-09-18: Tier 9 news-driven queue (rate spike, refi math, shutdown/USDA, WalletHub ranking, homestead exemption) -->
+  <url>
+    <loc>https://bondmortgagesolutions.com/blog/current-mortgage-rates-texas-october-2026.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bondmortgagesolutions.com/blog/should-i-refinance-mortgage-rates-high-2026.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bondmortgagesolutions.com/blog/government-shutdown-usda-loan-texas-2026.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bondmortgagesolutions.com/blog/frisco-mckinney-best-real-estate-market-2026-financing-guide.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bondmortgagesolutions.com/blog/texas-homestead-exemption-filing-guide-2026.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
