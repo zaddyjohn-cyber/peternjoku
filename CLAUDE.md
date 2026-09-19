@@ -43,6 +43,17 @@ Garland · Mesquite · Dallas · Plano · Frisco · McKinney · Allen · Richard
 
 Income limits (approx 2026): Dallas/Tarrant ~$97,200 · Collin/Denton/Rockwall ~$119,700
 
+## Loan Limits (2026) — corrected 2026-09-19
+
+- **Conforming loan limit: $832,750** (FHFA baseline, announced Nov 25, 2025 for 2026 originations).
+  $806,500 was the 2025 baseline and is stale — it had been miscited as "2026" in this file and in
+  the scheduled blog-post SKILL.md, and is likely still live in several already-published blog/service
+  pages (jumbo-loan-limits-dfw-texas-2026.html, conventional-loans.html,
+  conventional-loan-limits-dfw-counties-2026.html, DPA-stacking posts, Prosper cluster posts). A
+  sitewide grep-and-replace to fix those is an open follow-up task, not yet done.
+- **FHA loan limit (DFW high-cost counties — Dallas, Collin, Denton, Tarrant, Rockwall, Kaufman,
+  Ellis): $563,500.** Confirmed correct, unchanged.
+
 ## Priority Keywords (Target for #1 Google ranking)
 
 ### Tier 1 — Quick wins (30–60 days)
